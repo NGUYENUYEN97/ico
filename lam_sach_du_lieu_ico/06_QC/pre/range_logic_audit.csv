@@ -1,0 +1,24 @@
+check_id,table,kind,rule,source_of_rule,confidence,n_checked,n_violations
+R01,units,hard_range,Period trong 2001-2023,README (Period = nam) + pham vi quan sat,HIGH,1081,0
+R02_GDP PPP,units,hard_range,GDP PPP > 0 (khi khong missing),Dinh nghia bien (README),HIGH,1081,0
+R02_Population,units,hard_range,Population > 0 (khi khong missing),Dinh nghia bien (README),HIGH,1081,0
+R02_GDP PC,units,hard_range,GDP PC > 0 (khi khong missing),Dinh nghia bien (README),HIGH,1081,0
+R03,unit_complexities,hard_range,"Diversity Share trong [0,1]",README: 'Fraction of fields',HIGH,1081,0
+R04,outputs,hard_range,Outputs >= 0 va Outputs (Fractional) >= 0,README: so luong san pham,HIGH,1609733,0
+R05,capabilities,hard_range,"Innovation Capability (Normalized) trong [0,1]","README: Range [0,1]",HIGH,2711148,0
+R06,densities,hard_range,"Relatedness Density trong [0,1]",README: ti le linh vuc lien quan,HIGH,2709174,0
+R07,potentials,hard_range,Potential >= 0,README: so san pham ky vong,HIGH,2711148,0
+R08,field_complexities,hard_range,"Ubiquity Share trong [0,1]",README: 'Fraction of places',HIGH,57642,0
+R09,unit_proximities,hard_range,"Proximity trong [0,1]",README: xac suat,HIGH,18721,0
+L01,units,cross_variable,GDP PC = GDP PPP / Population,Dinh nghia GDP binh quan dau nguoi,HIGH,1035,0
+L02,unit_complexities x capabilities,derived_consistency,Diversity Share = trung binh Normalized Capability tren 2.508 linh vuc,Kiem tra thuc nghiem (README khong neu cong thuc),MEDIUM,1081,0
+L03,capabilities,cross_variable,Innovation (Binary) = Absolute OR Relative,Suy ra tu README (Innovation = 'basic presence'); khong co cong thuc chinh thuc,LOW,2711148,6
+L04,outputs,cross_variable,Outputs (Fractional) <= Outputs,Suy ra tu README: fractional = 'adjusted count ... 0.33 if shared across 3 fields',MEDIUM,1609733,10052
+L05,outputs,cross_variable,"Outputs (dem toan phan) la so nguyen voi T, S, E",Suy ra: bang sang che / bai bao / nhan hieu la don vi dem,MEDIUM,1609733,134
+L06a,capabilities x outputs,cross_file,Khong co dong outputs => Normalized Capability = 0,Kiem tra thuc nghiem giua 2 file,MEDIUM,2711148,0
+L06b,capabilities x outputs,cross_file,Outputs > 0 => Normalized Capability > 0,Kiem tra thuc nghiem giua 2 file,MEDIUM,2711148,0
+L07,outputs x units,cross_file,Population trong outputs = Population trong units,Hai file cung mo ta dan so,HIGH,1081,0
+L08,units,soft_plausibility,Population khong trung khop tuyet doi voi nam truoc,Soft check: dan so quoc gia hau nhu khong bao gio dung yen chinh xac,MEDIUM,1081,47
+L09,densities x field_complexities,structural_missing,Thieu Relatedness Density chi xay ra o field-year khong co Field Complexity,Kiem tra thuc nghiem (missing cau truc),MEDIUM,1974,0
+L10,outputs x fields,cross_variable,Dimension = tien to Field ID,README (T/S/P/E),HIGH,1609733,0
+L11,fields,cross_variable,Domain ID cung tien to voi Field ID,README,HIGH,2508,0

@@ -1,0 +1,11 @@
+dataset,variable,values,outside_allowed,whitespace_issues
+panel,tieu_vung,Dong A; Dong Nam A; Nam A; Tay A; Trung A,,0
+panel,nhom,ASEAN khac; Chau A khac; Viet Nam,,0
+panel,chau_luc_nguon,East Asia; West and Central Asia,,0
+panel,nhom_thu_nhap_hien_hanh,High income; Low income; Lower middle income; Upper middle income,,0
+cross,tieu_vung,Dong A; Dong Nam A; Nam A; Tay A; Trung A,,0
+cross,nhom,ASEAN khac; Chau A khac; Viet Nam,,0
+cross,chau_luc_nguon,East Asia; West and Central Asia,,0
+cross,nhom_thu_nhap_hien_hanh,High income; Low income; Lower middle income; Upper middle income,,0
+field,chieu,Entrepreneurial; Production; Science; Technology,,0
+vn,chieu,Entrepreneurial; Production; Science; Technology,,0

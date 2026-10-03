@@ -1,0 +1,57 @@
+table,variable,N,valid_N,missing_N,missing_pct
+units,Period,1081,1081,0,0.0
+units,Unit,1081,1081,0,0.0
+units,Unit Name,1081,1081,0,0.0
+units,Continent,1081,1081,0,0.0
+units,Income Group,1081,1081,0,0.0
+units,GDP PPP,1081,1035,46,4.255
+units,Population,1081,1081,0,0.0
+units,GDP PC,1081,1035,46,4.255
+units,__index_level_0__,1081,1081,0,0.0
+unit_complexities,Period,1081,1081,0,0.0
+unit_complexities,Unit,1081,1081,0,0.0
+unit_complexities,Diversity Share,1081,1081,0,0.0
+unit_complexities,Ecosystem Complexity Index,1081,1081,0,0.0
+unit_complexities,Complexity Outlook Index,1081,1081,0,0.0
+unit_complexities,Growth Outlook Index,1081,1081,0,0.0
+fields,Field ID,2508,2508,0,0.0
+fields,Field Name,2508,2508,0,0.0
+fields,Domain ID,2508,2508,0,0.0
+fields,Domain Name,2508,2508,0,0.0
+fields,Dimension Name,2508,2508,0,0.0
+fields,__index_level_0__,2508,2508,0,0.0
+field_complexities,Period,57642,57642,0,0.0
+field_complexities,Field ID,57642,57642,0,0.0
+field_complexities,Ubiquity Share,57642,57642,0,0.0
+field_complexities,Capability Complexity Index,57642,57642,0,0.0
+field_complexities,Complexity Outlook Index,57642,57642,0,0.0
+field_complexities,Growth Outlook Index,57642,57642,0,0.0
+outputs,Period,1609733,1609733,0,0.0
+outputs,Unit,1609733,1609733,0,0.0
+outputs,Dimension,1609733,1609733,0,0.0
+outputs,Field ID,1609733,1609733,0,0.0
+outputs,Outputs,1609733,1609733,0,0.0
+outputs,Outputs (Fractional),1609733,1609733,0,0.0
+outputs,Population,1609733,1609733,0,0.0
+outputs,__index_level_0__,1609733,1609733,0,0.0
+capabilities,Period,2711148,2711148,0,0.0
+capabilities,Unit,2711148,2711148,0,0.0
+capabilities,Field ID,2711148,2711148,0,0.0
+capabilities,Innovation Capability (Normalized),2711148,2711148,0,0.0
+capabilities,Innovation Capability (Binary),2711148,2711148,0,0.0
+capabilities,Absolute Capability (Binary),2711148,2711148,0,0.0
+capabilities,Relative Capability (Binary),2711148,2711148,0,0.0
+densities,Period,2709174,2709174,0,0.0
+densities,Unit,2709174,2709174,0,0.0
+densities,Field ID,2709174,2709174,0,0.0
+densities,Relatedness Density,2709174,2709174,0,0.0
+densities,__index_level_0__,2709174,2709174,0,0.0
+potentials,Period,2711148,2711148,0,0.0
+potentials,Unit,2711148,2711148,0,0.0
+potentials,Field ID,2711148,2711148,0,0.0
+potentials,Potential,2711148,2711148,0,0.0
+unit_proximities,Period,18721,18721,0,0.0
+unit_proximities,Unit 1,18721,18721,0,0.0
+unit_proximities,Unit 2,18721,18721,0,0.0
+unit_proximities,Proximity,18721,18721,0,0.0
+unit_proximities,__index_level_0__,18721,18721,0,0.0

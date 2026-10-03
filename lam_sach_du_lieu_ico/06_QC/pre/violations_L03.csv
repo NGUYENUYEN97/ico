@@ -1,0 +1,7 @@
+Period,Unit,Field ID,Innovation Capability (Normalized),Innovation Capability (Binary),Absolute Capability (Binary),Relative Capability (Binary)
+2023,OM,P - 8906,0.9548697884921306,False,True,False
+2023,IR,P - 8406,0.8477403013533401,False,True,False
+2023,IN,P - 1001,0.20479825175823974,False,True,False
+2023,QA,E - 37_1,0.9598238323972307,False,True,False
+2023,QA,E - 43_10,0.929667503862551,False,True,False
+2023,MY,P - 6215,0.8009679746486373,False,True,False

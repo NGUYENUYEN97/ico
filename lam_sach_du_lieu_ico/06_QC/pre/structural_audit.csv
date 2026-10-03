@@ -1,0 +1,10 @@
+table,rows,columns,key,duplicate_column_names,empty_columns,exact_duplicate_rows,duplicate_keys,missing_ids,malformed_ids,cells_non_ascii,unit_of_analysis,structure
+units,1081,9,Period + Unit,0,0,0,0,0,0,23,Period x Unit,long
+unit_complexities,1081,6,Period + Unit,0,0,0,0,0,0,0,Period x Unit,long
+fields,2508,6,Field ID,0,0,0,0,0,0,1,Field ID,long
+field_complexities,57642,6,Period + Field ID,0,0,0,0,0,0,0,Period x Field ID,long
+outputs,1609733,8,Period + Unit + Field ID,0,0,0,0,0,0,0,Period x Unit x Field ID,long
+capabilities,2711148,7,Period + Unit + Field ID,0,0,0,0,0,0,0,Period x Unit x Field ID,long
+densities,2709174,5,Period + Unit + Field ID,0,0,0,0,0,0,0,Period x Unit x Field ID,long
+potentials,2711148,4,Period + Unit + Field ID,0,0,0,0,0,0,0,Period x Unit x Field ID,long
+unit_proximities,18721,5,Period + Unit 1 + Unit 2,0,0,0,0,0,0,0,Period x Unit 1 x Unit 2,long

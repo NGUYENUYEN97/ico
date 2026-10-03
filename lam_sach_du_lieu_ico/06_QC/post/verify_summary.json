@@ -1,0 +1,16 @@
+{
+  "diff_summary": {
+    "RAW rows (field grid / panel)": "55176 / 1081",
+    "CLEAN rows (panel, cross, field, vn)": "1081, 47, 27588, 2508",
+    "changed_cells_total (moi dataset)": 38032,
+    "changed_cells_unique (khong dem trung file 4 = tap con file 3)": 35796,
+    "corrected (C)": 0,
+    "recoded (R)": 38032,
+    "set_missing (M)": 0,
+    "deleted rows (D)": 0,
+    "retained_after_review (K/F)": 10,
+    "unresolved (U)": 4
+  },
+  "n_checks": 80,
+  "n_passed": 80
+}

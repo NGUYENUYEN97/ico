@@ -1,0 +1,42 @@
+derived_variable,max_rel_diff,passed
+sang_che,1.515232639102093e-15,True
+bai_bao_kh,2.101713315567797e-15,True
+nhan_hieu,4.343284438688503e-15,True
+xuat_khau_ty_usd,2.96781268783068e-15,True
+so_nang_luc_cong_nghe,0.0,True
+so_nang_luc_khoa_hoc,0.0,True
+so_nang_luc_san_xuat,0.0,True
+so_nang_luc_khoi_nghiep,0.0,True
+so_nang_luc_tong,0.0,True
+so_nang_luc_tuong_doi,0.0,True
+so_nang_luc_tuyet_doi,0.0,True
+gdp_ppp_ty_usd,0.0,True
+dan_so_trieu,0.0,True
+ln_gdp_dau_nguoi,0.0,True
+gdp_dau_nguoi = gdp_ppp_usd / dan_so,0.0,True
+tang_truong_gdp_dau_nguoi,0.0,True
+sang_che_tren_trieu_dan,2.4849055712537806e-16,True
+ln_sang_che,2.1356176692099453e-16,True
+bai_bao_kh_tren_trieu_dan,2.70018410805647e-16,True
+ln_bai_bao_kh,2.130353426260092e-16,True
+nhan_hieu_tren_trieu_dan,2.220446049250313e-16,True
+ln_nhan_hieu,2.1565697112913255e-16,True
+xuat_khau_ty_usd_tren_trieu_dan,2.251999369834653e-16,True
+ln_xuat_khau_ty_usd,2.2027548293641445e-16,True
+hang_eci_chau_a,0.0,True
+hang_eci_the_gioi,0.0,True
+flag_dan_so_lap_lai,0.0,True
+thay_doi_eci_10_nam,0.0,True
+thay_doi_so_nang_luc_10_nam,0.0,True
+tang_truong_gdp_dau_nguoi_bq_10_nam,6.168417529502017e-15,True
+cross.eci = panel 2023,0.0,True
+cross.sang_che = panel 2023,0.0,True
+cross.so_nang_luc_tong = panel 2023,0.0,True
+cross.gdp_dau_nguoi = panel 2023,0.0,True
+gia_nhap_moi,0.0,True
+roi_bo,0.0,True
+ln_tiem_nang_2023,2.2166248399116482e-16,True
+ln_san_luong_2023,0.0,True
+chenh_lech_tiem_nang,4.440892098500626e-16,True
+flag_phan_so_vuot_toan_phan_2013,0.0,True
+flag_phan_so_vuot_toan_phan_2023,0.0,True

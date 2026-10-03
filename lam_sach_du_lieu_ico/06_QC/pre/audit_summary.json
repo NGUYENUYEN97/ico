@@ -1,0 +1,273 @@
+{
+  "n_asia_units": 47,
+  "structural": [
+    {
+      "table": "units",
+      "rows": 1081,
+      "columns": 9,
+      "key": "Period + Unit",
+      "duplicate_column_names": 0,
+      "empty_columns": 0,
+      "exact_duplicate_rows": 0,
+      "duplicate_keys": 0,
+      "missing_ids": 0,
+      "malformed_ids": 0,
+      "cells_non_ascii": 23,
+      "unit_of_analysis": "Period x Unit",
+      "structure": "long"
+    },
+    {
+      "table": "unit_complexities",
+      "rows": 1081,
+      "columns": 6,
+      "key": "Period + Unit",
+      "duplicate_column_names": 0,
+      "empty_columns": 0,
+      "exact_duplicate_rows": 0,
+      "duplicate_keys": 0,
+      "missing_ids": 0,
+      "malformed_ids": 0,
+      "cells_non_ascii": 0,
+      "unit_of_analysis": "Period x Unit",
+      "structure": "long"
+    },
+    {
+      "table": "fields",
+      "rows": 2508,
+      "columns": 6,
+      "key": "Field ID",
+      "duplicate_column_names": 0,
+      "empty_columns": 0,
+      "exact_duplicate_rows": 0,
+      "duplicate_keys": 0,
+      "missing_ids": 0,
+      "malformed_ids": 0,
+      "cells_non_ascii": 1,
+      "unit_of_analysis": "Field ID",
+      "structure": "long"
+    },
+    {
+      "table": "field_complexities",
+      "rows": 57642,
+      "columns": 6,
+      "key": "Period + Field ID",
+      "duplicate_column_names": 0,
+      "empty_columns": 0,
+      "exact_duplicate_rows": 0,
+      "duplicate_keys": 0,
+      "missing_ids": 0,
+      "malformed_ids": 0,
+      "cells_non_ascii": 0,
+      "unit_of_analysis": "Period x Field ID",
+      "structure": "long"
+    },
+    {
+      "table": "outputs",
+      "rows": 1609733,
+      "columns": 8,
+      "key": "Period + Unit + Field ID",
+      "duplicate_column_names": 0,
+      "empty_columns": 0,
+      "exact_duplicate_rows": 0,
+      "duplicate_keys": 0,
+      "missing_ids": 0,
+      "malformed_ids": 0,
+      "cells_non_ascii": 0,
+      "unit_of_analysis": "Period x Unit x Field ID",
+      "structure": "long"
+    },
+    {
+      "table": "capabilities",
+      "rows": 2711148,
+      "columns": 7,
+      "key": "Period + Unit + Field ID",
+      "duplicate_column_names": 0,
+      "empty_columns": 0,
+      "exact_duplicate_rows": 0,
+      "duplicate_keys": 0,
+      "missing_ids": 0,
+      "malformed_ids": 0,
+      "cells_non_ascii": 0,
+      "unit_of_analysis": "Period x Unit x Field ID",
+      "structure": "long"
+    },
+    {
+      "table": "densities",
+      "rows": 2709174,
+      "columns": 5,
+      "key": "Period + Unit + Field ID",
+      "duplicate_column_names": 0,
+      "empty_columns": 0,
+      "exact_duplicate_rows": 0,
+      "duplicate_keys": 0,
+      "missing_ids": 0,
+      "malformed_ids": 0,
+      "cells_non_ascii": 0,
+      "unit_of_analysis": "Period x Unit x Field ID",
+      "structure": "long"
+    },
+    {
+      "table": "potentials",
+      "rows": 2711148,
+      "columns": 4,
+      "key": "Period + Unit + Field ID",
+      "duplicate_column_names": 0,
+      "empty_columns": 0,
+      "exact_duplicate_rows": 0,
+      "duplicate_keys": 0,
+      "missing_ids": 0,
+      "malformed_ids": 0,
+      "cells_non_ascii": 0,
+      "unit_of_analysis": "Period x Unit x Field ID",
+      "structure": "long"
+    },
+    {
+      "table": "unit_proximities",
+      "rows": 18721,
+      "columns": 5,
+      "key": "Period + Unit 1 + Unit 2",
+      "duplicate_column_names": 0,
+      "empty_columns": 0,
+      "exact_duplicate_rows": 0,
+      "duplicate_keys": 0,
+      "missing_ids": 0,
+      "malformed_ids": 0,
+      "cells_non_ascii": 0,
+      "unit_of_analysis": "Period x Unit 1 x Unit 2",
+      "structure": "long"
+    }
+  ],
+  "range_logic": [
+    {
+      "check_id": "R01",
+      "n_checked": 1081,
+      "n_violations": 0
+    },
+    {
+      "check_id": "R02_GDP PPP",
+      "n_checked": 1081,
+      "n_violations": 0
+    },
+    {
+      "check_id": "R02_Population",
+      "n_checked": 1081,
+      "n_violations": 0
+    },
+    {
+      "check_id": "R02_GDP PC",
+      "n_checked": 1081,
+      "n_violations": 0
+    },
+    {
+      "check_id": "R03",
+      "n_checked": 1081,
+      "n_violations": 0
+    },
+    {
+      "check_id": "R04",
+      "n_checked": 1609733,
+      "n_violations": 0
+    },
+    {
+      "check_id": "R05",
+      "n_checked": 2711148,
+      "n_violations": 0
+    },
+    {
+      "check_id": "R06",
+      "n_checked": 2709174,
+      "n_violations": 0
+    },
+    {
+      "check_id": "R07",
+      "n_checked": 2711148,
+      "n_violations": 0
+    },
+    {
+      "check_id": "R08",
+      "n_checked": 57642,
+      "n_violations": 0
+    },
+    {
+      "check_id": "R09",
+      "n_checked": 18721,
+      "n_violations": 0
+    },
+    {
+      "check_id": "L01",
+      "n_checked": 1035,
+      "n_violations": 0
+    },
+    {
+      "check_id": "L02",
+      "n_checked": 1081,
+      "n_violations": 0
+    },
+    {
+      "check_id": "L03",
+      "n_checked": 2711148,
+      "n_violations": 6
+    },
+    {
+      "check_id": "L04",
+      "n_checked": 1609733,
+      "n_violations": 10052
+    },
+    {
+      "check_id": "L05",
+      "n_checked": 1609733,
+      "n_violations": 134
+    },
+    {
+      "check_id": "L06a",
+      "n_checked": 2711148,
+      "n_violations": 0
+    },
+    {
+      "check_id": "L06b",
+      "n_checked": 2711148,
+      "n_violations": 0
+    },
+    {
+      "check_id": "L07",
+      "n_checked": 1081,
+      "n_violations": 0
+    },
+    {
+      "check_id": "L08",
+      "n_checked": 1081,
+      "n_violations": 47
+    },
+    {
+      "check_id": "L09",
+      "n_checked": 1974,
+      "n_violations": 0
+    },
+    {
+      "check_id": "L10",
+      "n_checked": 1609733,
+      "n_violations": 0
+    },
+    {
+      "check_id": "L11",
+      "n_checked": 2508,
+      "n_violations": 0
+    }
+  ],
+  "coverage_no_record_country_years": {
+    "E": 101,
+    "S": 11,
+    "T": 53
+  },
+  "frac_anomaly_share_gt10pct": 683,
+  "frac_anomaly_share_gt1pct": 1166,
+  "frac_anomaly_country_year_dims": 2008,
+  "duplicate_field_name_rows": 11,
+  "n_outlier_flags_2023": 0,
+  "fc_missing_field_years": 42,
+  "density_rows_missing_asia": 1974,
+  "L04_by_dim": {
+    "T": 7299,
+    "E": 2753
+  }
+}

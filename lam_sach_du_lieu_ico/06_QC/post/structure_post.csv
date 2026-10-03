@@ -1,0 +1,5 @@
+dataset,rows,expected_rows,columns,duplicate_keys,exact_duplicate_rows,empty_columns,missing_ids
+panel,1081,1081,46,0,0,0,0
+cross,47,47,55,0,0,0,0
+field,27588,27588,33,0,0,0,0
+vn,2508,2508,33,0,0,0,0

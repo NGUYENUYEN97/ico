@@ -1,0 +1,287 @@
+{
+  "source_files": [
+    {
+      "file": "ico26_publicdata/capabilities.parquet",
+      "bytes": 54222945,
+      "sha256": "907da006769a75161815f2abc60e087ec61421a49b0b6882055c69ee9267e1f2",
+      "git_lfs_oid": "907da006769a75161815f2abc60e087ec61421a49b0b6882055c69ee9267e1f2",
+      "match": true
+    },
+    {
+      "file": "ico26_publicdata/densities.parquet",
+      "bytes": 140860087,
+      "sha256": "79f22e2c62a1b82d5003a85ac2ad3e34188a3bbf1586c65825e28faee4bf46fa",
+      "git_lfs_oid": "79f22e2c62a1b82d5003a85ac2ad3e34188a3bbf1586c65825e28faee4bf46fa",
+      "match": true
+    },
+    {
+      "file": "ico26_publicdata/field_complexities.parquet",
+      "bytes": 2355220,
+      "sha256": "385192f336ac67876bd83d3d263ec6584437586baeb253c107df38770032cffb",
+      "git_lfs_oid": "385192f336ac67876bd83d3d263ec6584437586baeb253c107df38770032cffb",
+      "match": true
+    },
+    {
+      "file": "ico26_publicdata/field_proximities.parquet",
+      "bytes": 32443438,
+      "sha256": "c656eb3a981a16c25575d6e6daf0fc16ff61d0dcf76e4de5f8deb3a3ef0a068a",
+      "git_lfs_oid": "c656eb3a981a16c25575d6e6daf0fc16ff61d0dcf76e4de5f8deb3a3ef0a068a",
+      "match": true
+    },
+    {
+      "file": "ico26_publicdata/fields.parquet",
+      "bytes": 82772,
+      "sha256": "53083b74fd68fb7cd271f5ff5af68cd04f2819022812254393903f944aacefbb",
+      "git_lfs_oid": "53083b74fd68fb7cd271f5ff5af68cd04f2819022812254393903f944aacefbb",
+      "match": true
+    },
+    {
+      "file": "ico26_publicdata/outputs.parquet",
+      "bytes": 121420838,
+      "sha256": "0dae179512327950cc131500f0a4660f0405104a48be1d88f48f74df82fddf76",
+      "git_lfs_oid": "0dae179512327950cc131500f0a4660f0405104a48be1d88f48f74df82fddf76",
+      "match": true
+    },
+    {
+      "file": "ico26_publicdata/potentials.parquet",
+      "bytes": 94927923,
+      "sha256": "87521a0d76c19077fc8dfd8f3ed78635b8290b64224c6a1a2f18efe033f188db",
+      "git_lfs_oid": "87521a0d76c19077fc8dfd8f3ed78635b8290b64224c6a1a2f18efe033f188db",
+      "match": true
+    },
+    {
+      "file": "ico26_publicdata/unit_complexities.parquet",
+      "bytes": 177136,
+      "sha256": "3806aefe99c8feb151b4531b9092eaf471f81292df46109c2feb279750a96c16",
+      "git_lfs_oid": "3806aefe99c8feb151b4531b9092eaf471f81292df46109c2feb279750a96c16",
+      "match": true
+    },
+    {
+      "file": "ico26_publicdata/unit_proximities.parquet",
+      "bytes": 302536,
+      "sha256": "dd8830bb54f9d7f9dfafb6f9fa1449d0be2c6efcfb64a43dd33acc6fb498373c",
+      "git_lfs_oid": "dd8830bb54f9d7f9dfafb6f9fa1449d0be2c6efcfb64a43dd33acc6fb498373c",
+      "match": true
+    },
+    {
+      "file": "ico26_publicdata/units.parquet",
+      "bytes": 154571,
+      "sha256": "20c4c547831055c77df0a16da1dad304483535d7784f72ecda18b7ccd42e3d29",
+      "git_lfs_oid": "20c4c547831055c77df0a16da1dad304483535d7784f72ecda18b7ccd42e3d29",
+      "match": true
+    }
+  ],
+  "extracts": [
+    {
+      "extract": "raw_units_asia.csv",
+      "source": "units.parquet",
+      "filter": "[('Unit', 'in', ['AE', 'AF', 'AM', 'AZ', 'BD', 'BH', 'BN', 'BT', 'CN', 'CY', 'GE', 'ID', 'IL', 'IN', 'IQ', 'IR', 'JO', 'JP', 'KG', 'KH', 'KP', 'KR', 'KW', 'KZ', 'LA', 'LB', 'LK', 'MM', 'MN', 'MV', 'MY', 'NP', 'OM', 'PH', 'PK', 'QA', 'SA', 'SG', 'SY', 'TH', 'TJ', 'TL', 'TM', 'TR', 'UZ', 'VN', 'YE'])]",
+      "rows": 1081,
+      "columns": [
+        "Period",
+        "Unit",
+        "Unit Name",
+        "Continent",
+        "Income Group",
+        "GDP PPP",
+        "Population",
+        "GDP PC",
+        "__index_level_0__"
+      ],
+      "sha256": "160f1f8e1439abbff8cd5bded8c36de09c07f7e1d2044f22d74f28772e46276d"
+    },
+    {
+      "extract": "raw_unit_complexities_all_193.csv",
+      "source": "unit_complexities.parquet",
+      "filter": "None",
+      "rows": 4439,
+      "columns": [
+        "Period",
+        "Unit",
+        "Diversity Share",
+        "Ecosystem Complexity Index",
+        "Complexity Outlook Index",
+        "Growth Outlook Index"
+      ],
+      "sha256": "d54a64828062a97f9f7c7d12ecb1b779baac591460a3bd8a436dd5ac8f150ba0"
+    },
+    {
+      "extract": "raw_fields.csv",
+      "source": "fields.parquet",
+      "filter": "None",
+      "rows": 2508,
+      "columns": [
+        "Field ID",
+        "Field Name",
+        "Domain ID",
+        "Domain Name",
+        "Dimension Name",
+        "__index_level_0__"
+      ],
+      "sha256": "dc867652b7249472343ef36e256628ddd8c1aef961b6c52cea69684d6f4ad03c"
+    },
+    {
+      "extract": "raw_field_complexities_2013_2023.csv",
+      "source": "field_complexities.parquet",
+      "filter": "[('Period', 'in', [2013, 2023])]",
+      "rows": 5015,
+      "columns": [
+        "Period",
+        "Field ID",
+        "Ubiquity Share",
+        "Capability Complexity Index",
+        "Complexity Outlook Index",
+        "Growth Outlook Index"
+      ],
+      "sha256": "5dbf154e9c2784e51a830ef9357ab798cdfc1053da7813225c9f5e64a41ca133"
+    },
+    {
+      "extract": "raw_capabilities_asean_2013_2023.csv",
+      "source": "capabilities.parquet",
+      "filter": "[('Unit', 'in', ['BN', 'ID', 'KH', 'LA', 'MM', 'MY', 'PH', 'SG', 'TH', 'TL', 'VN']), ('Period', 'in', [2013, 2023])]",
+      "rows": 55176,
+      "columns": [
+        "Period",
+        "Unit",
+        "Field ID",
+        "Innovation Capability (Normalized)",
+        "Innovation Capability (Binary)",
+        "Absolute Capability (Binary)",
+        "Relative Capability (Binary)"
+      ],
+      "sha256": "9ef00c9f0f39899abecf17634b12b53fc743097276f08c04627ac3162c294617"
+    },
+    {
+      "extract": "raw_densities_asean_2013_2023.csv",
+      "source": "densities.parquet",
+      "filter": "[('Unit', 'in', ['BN', 'ID', 'KH', 'LA', 'MM', 'MY', 'PH', 'SG', 'TH', 'TL', 'VN']), ('Period', 'in', [2013, 2023])]",
+      "rows": 55165,
+      "columns": [
+        "Period",
+        "Unit",
+        "Field ID",
+        "Relatedness Density",
+        "__index_level_0__"
+      ],
+      "sha256": "2b02aedecb40eb0d8d3e50a64cca4cafcb3e6fc09937d52de5e512f1d9ba80ec"
+    },
+    {
+      "extract": "raw_potentials_asean_2013_2023.csv",
+      "source": "potentials.parquet",
+      "filter": "[('Unit', 'in', ['BN', 'ID', 'KH', 'LA', 'MM', 'MY', 'PH', 'SG', 'TH', 'TL', 'VN']), ('Period', 'in', [2013, 2023])]",
+      "rows": 55176,
+      "columns": [
+        "Period",
+        "Unit",
+        "Field ID",
+        "Potential"
+      ],
+      "sha256": "f32abf317b20b85b68816efc79438b58c23d4f5d27fcff5a9f81afeb24309f11"
+    },
+    {
+      "extract": "raw_outputs_asean_2013_2023.csv",
+      "source": "outputs.parquet",
+      "filter": "[('Unit', 'in', ['BN', 'ID', 'KH', 'LA', 'MM', 'MY', 'PH', 'SG', 'TH', 'TL', 'VN']), ('Period', 'in', [2013, 2023])]",
+      "rows": 35242,
+      "columns": [
+        "Period",
+        "Unit",
+        "Dimension",
+        "Field ID",
+        "Outputs",
+        "Outputs (Fractional)",
+        "Population",
+        "__index_level_0__"
+      ],
+      "sha256": "98c8315f76dc733388c8656e4f46c3a118f21f938641b6c21e3df48628e18971"
+    },
+    {
+      "extract": "raw_unit_proximities_vn.csv",
+      "source": "unit_proximities.parquet",
+      "filter": "None",
+      "rows": 193,
+      "columns": [
+        "Period",
+        "Unit 1",
+        "Unit 2",
+        "Proximity",
+        "__index_level_0__"
+      ],
+      "sha256": "7111c16691645d43995c1a3a5c47c1fd99d494e9793ddc700c0678d016946532"
+    }
+  ],
+  "referenced_not_copied": [
+    {
+      "source": "outputs.parquet",
+      "filter": "Unit in 47 nuoc chau A, moi nam",
+      "used_for": "tong san luong quoc gia-nam (panel)"
+    },
+    {
+      "source": "capabilities.parquet",
+      "filter": "Unit in 47 nuoc chau A, moi nam",
+      "used_for": "so linh vuc co nang luc quoc gia-nam (panel)"
+    }
+  ],
+  "asia_units": [
+    "AE",
+    "AF",
+    "AM",
+    "AZ",
+    "BD",
+    "BH",
+    "BN",
+    "BT",
+    "CN",
+    "CY",
+    "GE",
+    "ID",
+    "IL",
+    "IN",
+    "IQ",
+    "IR",
+    "JO",
+    "JP",
+    "KG",
+    "KH",
+    "KP",
+    "KR",
+    "KW",
+    "KZ",
+    "LA",
+    "LB",
+    "LK",
+    "MM",
+    "MN",
+    "MV",
+    "MY",
+    "NP",
+    "OM",
+    "PH",
+    "PK",
+    "QA",
+    "SA",
+    "SG",
+    "SY",
+    "TH",
+    "TJ",
+    "TL",
+    "TM",
+    "TR",
+    "UZ",
+    "VN",
+    "YE"
+  ],
+  "asean_units": [
+    "BN",
+    "ID",
+    "KH",
+    "LA",
+    "MM",
+    "MY",
+    "PH",
+    "SG",
+    "TH",
+    "TL",
+    "VN"
+  ]
+}

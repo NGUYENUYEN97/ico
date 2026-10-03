@@ -1,0 +1,81 @@
+check_id,description,passed,detail
+V01,RAW nguon bat bien: ico26_publicdata/capabilities.parquet,True,907da006769a7516
+V01,RAW nguon bat bien: ico26_publicdata/densities.parquet,True,79f22e2c62a1b82d
+V01,RAW nguon bat bien: ico26_publicdata/field_complexities.parquet,True,385192f336ac6787
+V01,RAW nguon bat bien: ico26_publicdata/field_proximities.parquet,True,c656eb3a981a16c2
+V01,RAW nguon bat bien: ico26_publicdata/fields.parquet,True,53083b74fd68fb7c
+V01,RAW nguon bat bien: ico26_publicdata/outputs.parquet,True,0dae179512327950
+V01,RAW nguon bat bien: ico26_publicdata/potentials.parquet,True,87521a0d76c19077
+V01,RAW nguon bat bien: ico26_publicdata/unit_complexities.parquet,True,3806aefe99c8feb1
+V01,RAW nguon bat bien: ico26_publicdata/unit_proximities.parquet,True,dd8830bb54f9d7f9
+V01,RAW nguon bat bien: ico26_publicdata/units.parquet,True,20c4c547831055c7
+V02,Ban trich RAW khong doi: raw_units_asia.csv,True,160f1f8e1439abbf
+V02,Ban trich RAW khong doi: raw_unit_complexities_all_193.csv,True,d54a64828062a97f
+V02,Ban trich RAW khong doi: raw_fields.csv,True,dc867652b7249472
+V02,Ban trich RAW khong doi: raw_field_complexities_2013_2023.csv,True,5dbf154e9c2784e5
+V02,Ban trich RAW khong doi: raw_capabilities_asean_2013_2023.csv,True,9ef00c9f0f39899a
+V02,Ban trich RAW khong doi: raw_densities_asean_2013_2023.csv,True,2b02aedecb40eb0d
+V02,Ban trich RAW khong doi: raw_potentials_asean_2013_2023.csv,True,f32abf317b20b85b
+V02,Ban trich RAW khong doi: raw_outputs_asean_2013_2023.csv,True,98c8315f76dc7333
+V02,Ban trich RAW khong doi: raw_unit_proximities_vn.csv,True,7111c16691645d43
+V03,"panel: so dong = 1081, khong trung khoa, khong cot rong",True,"{'dataset': 'panel', 'rows': 1081, 'expected_rows': 1081, 'columns': 46, 'duplicate_keys': 0, 'exact_duplicate_rows': 0, 'empty_columns': 0, 'missing_ids': 0}"
+V03,"cross: so dong = 47, khong trung khoa, khong cot rong",True,"{'dataset': 'cross', 'rows': 47, 'expected_rows': 47, 'columns': 55, 'duplicate_keys': 0, 'exact_duplicate_rows': 0, 'empty_columns': 0, 'missing_ids': 0}"
+V03,"field: so dong = 27588, khong trung khoa, khong cot rong",True,"{'dataset': 'field', 'rows': 27588, 'expected_rows': 27588, 'columns': 33, 'duplicate_keys': 0, 'exact_duplicate_rows': 0, 'empty_columns': 0, 'missing_ids': 0}"
+V03,"vn: so dong = 2508, khong trung khoa, khong cot rong",True,"{'dataset': 'vn', 'rows': 2508, 'expected_rows': 2508, 'columns': 33, 'duplicate_keys': 0, 'exact_duplicate_rows': 0, 'empty_columns': 0, 'missing_ids': 0}"
+V04,panel.tieu_vung: chi gom gia tri cho phep,True,set()
+V04,panel.nhom: chi gom gia tri cho phep,True,set()
+V04,panel.chau_luc_nguon: chi gom gia tri cho phep,True,set()
+V04,panel.nhom_thu_nhap_hien_hanh: chi gom gia tri cho phep,True,set()
+V04,cross.tieu_vung: chi gom gia tri cho phep,True,set()
+V04,cross.nhom: chi gom gia tri cho phep,True,set()
+V04,cross.chau_luc_nguon: chi gom gia tri cho phep,True,set()
+V04,cross.nhom_thu_nhap_hien_hanh: chi gom gia tri cho phep,True,set()
+V04,field.chieu: chi gom gia tri cho phep,True,set()
+V04,vn.chieu: chi gom gia tri cho phep,True,set()
+V05,Khong con gia tri ngoai mien hop le da xac lap (03_DATA_DICTIONARY),True,[]
+V06,Moi bien co missing deu da duoc phan loai loai missing,True,[]
+V07,Tinh lai doc lap: sang_che,True,1.515232639102093e-15
+V07,Tinh lai doc lap: bai_bao_kh,True,2.101713315567797e-15
+V07,Tinh lai doc lap: nhan_hieu,True,4.343284438688503e-15
+V07,Tinh lai doc lap: xuat_khau_ty_usd,True,2.96781268783068e-15
+V07,Tinh lai doc lap: so_nang_luc_cong_nghe,True,0.0
+V07,Tinh lai doc lap: so_nang_luc_khoa_hoc,True,0.0
+V07,Tinh lai doc lap: so_nang_luc_san_xuat,True,0.0
+V07,Tinh lai doc lap: so_nang_luc_khoi_nghiep,True,0.0
+V07,Tinh lai doc lap: so_nang_luc_tong,True,0.0
+V07,Tinh lai doc lap: so_nang_luc_tuong_doi,True,0.0
+V07,Tinh lai doc lap: so_nang_luc_tuyet_doi,True,0.0
+V07,Tinh lai doc lap: gdp_ppp_ty_usd,True,0.0
+V07,Tinh lai doc lap: dan_so_trieu,True,0.0
+V07,Tinh lai doc lap: ln_gdp_dau_nguoi,True,0.0
+V07,Tinh lai doc lap: gdp_dau_nguoi = gdp_ppp_usd / dan_so,True,0.0
+V07,Tinh lai doc lap: tang_truong_gdp_dau_nguoi,True,0.0
+V07,Tinh lai doc lap: sang_che_tren_trieu_dan,True,2.4849055712537806e-16
+V07,Tinh lai doc lap: ln_sang_che,True,2.1356176692099453e-16
+V07,Tinh lai doc lap: bai_bao_kh_tren_trieu_dan,True,2.70018410805647e-16
+V07,Tinh lai doc lap: ln_bai_bao_kh,True,2.130353426260092e-16
+V07,Tinh lai doc lap: nhan_hieu_tren_trieu_dan,True,2.220446049250313e-16
+V07,Tinh lai doc lap: ln_nhan_hieu,True,2.1565697112913255e-16
+V07,Tinh lai doc lap: xuat_khau_ty_usd_tren_trieu_dan,True,2.251999369834653e-16
+V07,Tinh lai doc lap: ln_xuat_khau_ty_usd,True,2.2027548293641445e-16
+V07,Tinh lai doc lap: hang_eci_chau_a,True,0.0
+V07,Tinh lai doc lap: hang_eci_the_gioi,True,0.0
+V07,Tinh lai doc lap: flag_dan_so_lap_lai,True,0.0
+V07,Tinh lai doc lap: thay_doi_eci_10_nam,True,0.0
+V07,Tinh lai doc lap: thay_doi_so_nang_luc_10_nam,True,0.0
+V07,Tinh lai doc lap: tang_truong_gdp_dau_nguoi_bq_10_nam,True,6.168417529502017e-15
+V07,Tinh lai doc lap: cross.eci = panel 2023,True,0.0
+V07,Tinh lai doc lap: cross.sang_che = panel 2023,True,0.0
+V07,Tinh lai doc lap: cross.so_nang_luc_tong = panel 2023,True,0.0
+V07,Tinh lai doc lap: cross.gdp_dau_nguoi = panel 2023,True,0.0
+V07,Tinh lai doc lap: gia_nhap_moi,True,0.0
+V07,Tinh lai doc lap: roi_bo,True,0.0
+V07,Tinh lai doc lap: ln_tiem_nang_2023,True,2.2166248399116482e-16
+V07,Tinh lai doc lap: ln_san_luong_2023,True,0.0
+V07,Tinh lai doc lap: chenh_lech_tiem_nang,True,4.440892098500626e-16
+V07,Tinh lai doc lap: flag_phan_so_vuot_toan_phan_2013,True,0.0
+V07,Tinh lai doc lap: flag_phan_so_vuot_toan_phan_2023,True,0.0
+V07,4_viet_nam = loc ma_qg == VN tu file 3,True,
+V08,Diff doc lap trung khop 05_RAW_CLEAN_DIFF (panel + field),True,doc lap 35796 o; file diff 35796 o
+V09,Moi o thay doi deu co log_id ton tai trong CLEANING_LOG,True,[]
+V10,CL001: moi o doi NA->0 deu co Normalized Capability = 0 (bang chung cua quy tac),True,38032

@@ -1,0 +1,8 @@
+ud_id,case_id,variable,raw_value,missing_evidence,question,recommended_options
+UD01,"47 nuoc, 2023",dan_so (-> gdp_dau_nguoi 2023),= gia tri 2022,Dan so 2023 tu WDI/UN WPP; xac nhan cua nha san xuat ICO,"Co thay dan so 2023 bang nguon chinh thuc khong, hay giu va bao cao?","(a) Giu + bao cao (mac dinh hien tai); (b) Thay bang WDI 2023 va tinh lai GDP/nguoi, ghi log C; (c) Dat missing cho bien theo dau nguoi 2023"
+UD02,10.052 dong T/E chau A,Outputs (Fractional),> Outputs,Tai lieu phuong phap dem phan so cua ICO,Fractional > Full la dung theo phuong phap (vd dem theo don khac nhau) hay loi?,"(a) Giu (mac dinh); (b) Do nhay: loai quoc gia-nam co ty_le_bat_thuong > 0,10; (c) Neu xac nhan loi: dat missing cac dong do"
+UD03,134 dong E,Outputs (E),so khong nguyen,Phuong phap dem nhan hieu,Dem toan phan nhan hieu co the khong nguyen?,(a) Giu; (b) Dung dem phan so cho chieu E (da la mac dinh o panel)
+UD04,6 dong 2023,Innovation/Absolute Capability (Binary),"Abs=1, Inn=0",Quy tac xac dinh Innovation Capability (Binary),Innovation co phai = Absolute OR Relative?,"(a) Giu (mac dinh); (b) Neu nguon xac nhan quy tac: sua Innovation = 1, ghi log C"
+UD05,Chieu E 2022-2023,nhan_hieu,giam 22% va 44%,Thong tin do tre/do bao phu du lieu nhan hieu,Co loai 2022-2023 cho chieu E khoi phan tich xu huong?,(a) Giu + do nhay; (b) Gioi han phan tich E den 2021
+UD06,CL001,san_luong_*,dong vang mat,Xac nhan tu ICO rang dong vang mat = 0,Chap nhan quy tac vang mat = 0?,"(a) Chap nhan (mac dinh, co bang chung L06a); (b) Do nhay: coi la missing"
+UD07,47 nuoc,nhom_thu_nhap_hien_hanh,hang so theo thoi gian,Lich su phan loai WB theo nam (FY),Can bien thu nhap theo tung nam khong?,"(a) Chi dung cho phan tich cat ngang (mac dinh); (b) Bo sung bang lich su WB, ghi log"

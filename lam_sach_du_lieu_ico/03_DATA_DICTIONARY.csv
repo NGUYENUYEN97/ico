@@ -1,0 +1,168 @@
+dataset,variable,label,role,data_type,measurement_level,valid_values_range,missing_code,n_valid,n_missing,n_unique,min,max,n_out_of_range,raw_source,source_of_rule,confidence,cleaning_log_ref
+1_panel,nam,Nam quan sat,ID (thoi gian),integer,ID,2001-2023,o trong,1081,0,23,2001,2023,0,units.Period,README (Period),HIGH,
+1_panel,ma_qg,Ma quoc gia ISO 3166-1 alpha-2,ID,text,ID,2 chu in hoa,o trong,1081,0,47,,,,units.Unit,Quy uoc ma ISO,HIGH,
+1_panel,ten_qg,"Ten quoc gia (nguyen ban nguon, UTF-8)",Nhan,text,Nominal,Khong rong,o trong,1081,0,47,,,,units.Unit Name,units.parquet,HIGH,CL012
+1_panel,chau_luc_nguon,Vung theo phan loai cua nguon,Nhom,text,Nominal,East Asia; West and Central Asia,o trong,1081,0,2,,,,units.Continent,units.parquet,HIGH,
+1_panel,tieu_vung,Tieu vung UN M49,Nhom (dan xuat),text,Nominal,Dong A; Dong Nam A; Nam A; Trung A; Tay A,o trong,1081,0,5,,,,ma_qg,UN M49,HIGH,CL017
+1_panel,nhom,Nhom so sanh,Nhom (dan xuat),text,Nominal,Viet Nam; ASEAN khac; Chau A khac,o trong,1081,0,3,,,,ma_qg,Dinh nghia nghien cuu (dua tren asean_hien_nay),HIGH,CL017
+1_panel,asean_hien_nay,"Thanh vien ASEAN tinh den 2025 (11 nuoc, ke ca TL)",Nhom (dan xuat),integer,Nominal,0/1,o trong,1081,0,2,0,1,0,ma_qg,ASEAN Secretariat,HIGH,CL017
+1_panel,asean_thoi_diem,La thanh vien ASEAN tai nam quan sat,Nhom (dan xuat),integer,Nominal,0/1,o trong,1081,0,2,0,1,0,"ma_qg, nam",ASEAN Secretariat (nam gia nhap),HIGH,CL017
+1_panel,viet_nam,La Viet Nam,Nhom (dan xuat),integer,Nominal,0/1,o trong,1081,0,2,0,1,0,ma_qg,Dinh nghia,HIGH,
+1_panel,nhom_thu_nhap_hien_hanh,"Nhom thu nhap WB - phan loai HIEN HANH, nguon gan cho moi nam",Nhom,text,Nominal,Low/Lower middle/Upper middle/High income,o trong,1081,0,4,,,,units.Income Group,units.parquet; WB,HIGH,CL004
+1_panel,bac_thu_nhap,"Bac thu nhap (1=thap ... 4=cao), theo nhom_thu_nhap_hien_hanh",Dan xuat,integer,Ordinal,1-4,o trong,1081,0,4,1,4,0,nhom_thu_nhap_hien_hanh,Thu tu WB,HIGH,CL004
+1_panel,gdp_ppp_usd,"GDP PPP (USD, gia tri nguon)",Nguon,decimal,Continuous,> 0,o trong,1035,46,1035,2969250628.0,32004900000000.0,0,units.GDP PPP,README,HIGH,CL009
+1_panel,dan_so,"Dan so (nguoi, gia tri nguon)",Nguon,decimal,Continuous,> 0,o trong,1081,0,1033,287324.0,1417173173.0,0,units.Population,README,HIGH,CL003
+1_panel,gdp_dau_nguoi,"GDP PPP binh quan dau nguoi (USD, gia tri nguon)",Nguon,decimal,Continuous,> 0; = gdp_ppp_usd/dan_so,o trong,1035,46,1035,1467.0707167165199,136004.7911822945,0,units.GDP PC,README + L01,HIGH,"CL003, CL009"
+1_panel,gdp_ppp_ty_usd,GDP PPP (ty USD),Dan xuat,decimal,Continuous,> 0,o trong,1035,46,1035,2.969250628,32004.9,0,gdp_ppp_usd,= gdp_ppp_usd / 1e9,HIGH,
+1_panel,dan_so_trieu,Dan so (trieu nguoi),Dan xuat,decimal,Continuous,> 0,o trong,1081,0,1033,0.287324,1417.173173,0,dan_so,= dan_so / 1e6,HIGH,CL003
+1_panel,ln_gdp_dau_nguoi,ln(GDP binh quan dau nguoi),Dan xuat,decimal,Continuous,so thuc,o trong,1035,46,1035,7.2910229819685615,11.820445393379229,,gdp_dau_nguoi,= ln(gdp_dau_nguoi),HIGH,
+1_panel,tang_truong_gdp_dau_nguoi,Tang truong GDP/nguoi so voi nam truoc (%),Dan xuat,decimal,Continuous,so thuc; trong o nam 2001,o trong,990,91,990,-38.560406390496496,49.03571403602503,,gdp_dau_nguoi,= 100*(x_t/x_{t-1} - 1),HIGH,CL003
+1_panel,do_da_dang,Diversity Share (trung binh nang luc chuan hoa),Nguon,decimal,Continuous,"[0,1]",o trong,1081,0,1081,0.003742579263993688,0.517815604809976,0,unit_complexities.Diversity Share,README + L02,HIGH,
+1_panel,eci,Ecosystem Complexity Index,Nguon,decimal,Continuous,RULE NOT ESTABLISHED - DO NOT AUTO-CORRECT,o trong,1081,0,1081,-3.0639612205935527,1.105866056577475,,unit_complexities.Ecosystem Complexity Index,README (khong co mien),LOW,
+1_panel,coi,Complexity Outlook Index (quoc gia),Nguon,decimal,Continuous,RULE NOT ESTABLISHED - DO NOT AUTO-CORRECT,o trong,1081,0,1081,-22.490371972771555,498.4931192262901,,unit_complexities.Complexity Outlook Index,README vi du 0.75 khong khop thang do du lieu,LOW,CL018
+1_panel,goi,Growth Outlook Index (quoc gia),Nguon,decimal,Continuous,RULE NOT ESTABLISHED - DO NOT AUTO-CORRECT,o trong,1081,0,1081,4.228725975384427,675.4562990182098,,unit_complexities.Growth Outlook Index,README vi du 0.82 khong khop thang do du lieu,LOW,CL018
+1_panel,hang_eci_the_gioi,Thu hang ECI trong 193 don vi (1 = cao nhat),Dan xuat,integer,Ordinal,1-193,o trong,1081,0,187,1,192,0,eci (toan bo 193),rank(min) tren unit_complexities ca 193 don vi,HIGH,
+1_panel,hang_eci_chau_a,Thu hang ECI trong 47 nuoc chau A,Dan xuat,integer,Ordinal,1-47,o trong,1081,0,47,1,47,0,eci,rank(min),HIGH,
+1_panel,sang_che,Bang sang che (tong dem phan so),Dan xuat,decimal,Continuous,>= 0; trong = khong co ban ghi,o trong,1028,53,982,0.25,321984.92454226286,0,outputs (T),"Tong outputs.Outputs (Fractional), T",MEDIUM,"CL002, CL005"
+1_panel,sang_che_tren_trieu_dan,sang_che tren 1 trieu dan,Dan xuat,decimal,Continuous,>= 0,o trong,1028,53,1028,0.02992634499803116,2754.8633938434186,0,"sang_che, dan_so_trieu",= sang_che / dan_so_trieu,HIGH,CL003
+1_panel,ln_sang_che,ln(1 + sang_che),Dan xuat,decimal,Continuous,>= 0,o trong,1028,53,967,0.22314355131420976,12.682263110969453,0,sang_che,= ln(1 + sang_che),HIGH,
+1_panel,bai_bao_kh,Cong bo khoa hoc (tong dem phan so),Dan xuat,decimal,Continuous,>= 0; trong = khong co ban ghi,o trong,1070,11,1043,0.015151515151515152,283330.8572136939,0,outputs (S),"Tong outputs.Outputs (Fractional), S",MEDIUM,CL002
+1_panel,bai_bao_kh_tren_trieu_dan,bai_bao_kh tren 1 trieu dan,Dan xuat,decimal,Continuous,>= 0,o trong,1070,11,1070,0.0029244626333542532,952.9587397163249,0,"bai_bao_kh, dan_so_trieu",= bai_bao_kh / dan_so_trieu,HIGH,CL003
+1_panel,ln_bai_bao_kh,ln(1 + bai_bao_kh),Dan xuat,decimal,Continuous,>= 0,o trong,1070,11,1043,0.015037877364540516,12.554374129950796,0,bai_bao_kh,= ln(1 + bai_bao_kh),HIGH,
+1_panel,nhan_hieu,Nhan hieu (tong dem phan so),Dan xuat,decimal,Continuous,>= 0; trong = khong co ban ghi,o trong,980,101,894,0.3333333333333333,249271.36957711965,0,outputs (E),"Tong outputs.Outputs (Fractional), E",MEDIUM,"CL002, CL005, CL006, CL010"
+1_panel,nhan_hieu_tren_trieu_dan,nhan_hieu tren 1 trieu dan,Dan xuat,decimal,Continuous,>= 0,o trong,980,101,980,0.007325835262799615,1709.9604534834655,0,"nhan_hieu, dan_so_trieu",= nhan_hieu / dan_so_trieu,HIGH,CL003
+1_panel,ln_nhan_hieu,ln(1 + nhan_hieu),Dan xuat,decimal,Continuous,>= 0,o trong,980,101,894,0.2876820724517809,12.426301431348147,0,nhan_hieu,= ln(1 + nhan_hieu),HIGH,
+1_panel,xuat_khau_ty_usd,Xuat khau (ty USD),Dan xuat,decimal,Continuous,>= 0,o trong,1081,0,1081,0.008681653715953301,2803.0095703393786,0,outputs (P),"Tong outputs.Outputs (Fractional), P / 1e9",HIGH,
+1_panel,xuat_khau_ty_usd_tren_trieu_dan,xuat_khau_ty_usd tren 1 trieu dan,Dan xuat,decimal,Continuous,>= 0,o trong,1081,0,1081,0.002926134036490687,64.96609213792594,0,"xuat_khau_ty_usd, dan_so_trieu",= xuat_khau_ty_usd / dan_so_trieu,HIGH,CL003
+1_panel,ln_xuat_khau_ty_usd,ln(1 + xuat_khau_ty_usd),Dan xuat,decimal,Continuous,>= 0,o trong,1081,0,1081,0.008644184865219258,7.938805661251145,0,xuat_khau_ty_usd,= ln(1 + xuat_khau_ty_usd),HIGH,
+1_panel,so_nang_luc_cong_nghe,So linh vuc co nang luc - cong_nghe,Dan xuat,integer,Continuous,>= 0,o trong,1081,0,148,0,474,0,capabilities,Dem capabilities.Innovation Capability (Binary),HIGH,
+1_panel,so_nang_luc_khoa_hoc,So linh vuc co nang luc - khoa_hoc,Dan xuat,integer,Continuous,>= 0,o trong,1081,0,324,0,607,0,capabilities,Dem capabilities.Innovation Capability (Binary),HIGH,
+1_panel,so_nang_luc_san_xuat,So linh vuc co nang luc - san_xuat,Dan xuat,integer,Continuous,>= 0,o trong,1081,0,290,0,720,0,capabilities,Dem capabilities.Innovation Capability (Binary),HIGH,
+1_panel,so_nang_luc_khoi_nghiep,So linh vuc co nang luc - khoi_nghiep,Dan xuat,integer,Continuous,>= 0,o trong,1081,0,247,0,530,0,capabilities,Dem capabilities.Innovation Capability (Binary),HIGH,
+1_panel,so_nang_luc_tong,Tong so linh vuc co nang luc,Dan xuat,integer,Continuous,0-2508,o trong,1081,0,503,0,2322,0,so_nang_luc_*,Tong 4 chieu,HIGH,
+1_panel,so_nang_luc_tuong_doi,So linh vuc co nang luc tuong doi,Dan xuat,integer,Continuous,0-2508,o trong,1081,0,468,0,1570,0,capabilities,Dem Relative Capability (Binary),HIGH,
+1_panel,so_nang_luc_tuyet_doi,So linh vuc co nang luc tuyet doi,Dan xuat,integer,Continuous,0-2508,o trong,1081,0,282,0,2322,0,capabilities,Dem Absolute Capability (Binary),HIGH,CL007
+1_panel,flag_dan_so_lap_lai,FLAG: dan so dung bang nam truoc (nghi chuyen tiep gia tri),Flag,integer,Nominal,0/1,o trong,1081,0,2,0,1,0,dan_so,L08,MEDIUM,CL003
+1_panel,ty_le_bat_thuong_sang_che,FLAG: ty trong sang_che den tu dong co Fractional > Full,Flag,decimal,Continuous,"[0,1]",o trong,1028,53,798,0.0,1.0,0,outputs (T),L04,MEDIUM,CL005
+1_panel,ty_le_bat_thuong_nhan_hieu,FLAG: ty trong nhan_hieu den tu dong co Fractional > Full,Flag,decimal,Continuous,"[0,1]",o trong,980,101,481,0.0,1.0,0,outputs (E),L04,MEDIUM,CL005
+2_cat_ngang,ma_qg,Ma quoc gia ISO 3166-1 alpha-2,ID,text,ID,2 chu in hoa,o trong,47,0,47,,,,units.Unit,Quy uoc ma ISO,HIGH,
+2_cat_ngang,ten_qg,"Ten quoc gia (nguyen ban nguon, UTF-8)",Nhan,text,Nominal,Khong rong,o trong,47,0,47,,,,units.Unit Name,units.parquet,HIGH,CL012
+2_cat_ngang,chau_luc_nguon,Vung theo phan loai cua nguon,Nhom,text,Nominal,East Asia; West and Central Asia,o trong,47,0,2,,,,units.Continent,units.parquet,HIGH,
+2_cat_ngang,tieu_vung,Tieu vung UN M49,Nhom (dan xuat),text,Nominal,Dong A; Dong Nam A; Nam A; Trung A; Tay A,o trong,47,0,5,,,,ma_qg,UN M49,HIGH,CL017
+2_cat_ngang,nhom,Nhom so sanh,Nhom (dan xuat),text,Nominal,Viet Nam; ASEAN khac; Chau A khac,o trong,47,0,3,,,,ma_qg,Dinh nghia nghien cuu (dua tren asean_hien_nay),HIGH,CL017
+2_cat_ngang,asean_hien_nay,"Thanh vien ASEAN tinh den 2025 (11 nuoc, ke ca TL)",Nhom (dan xuat),integer,Nominal,0/1,o trong,47,0,2,0,1,0,ma_qg,ASEAN Secretariat,HIGH,CL017
+2_cat_ngang,asean_thoi_diem,La thanh vien ASEAN tai nam quan sat,Nhom (dan xuat),integer,Nominal,0/1,o trong,47,0,2,0,1,0,"ma_qg, nam",ASEAN Secretariat (nam gia nhap),HIGH,CL017
+2_cat_ngang,viet_nam,La Viet Nam,Nhom (dan xuat),integer,Nominal,0/1,o trong,47,0,2,0,1,0,ma_qg,Dinh nghia,HIGH,
+2_cat_ngang,nhom_thu_nhap_hien_hanh,"Nhom thu nhap WB - phan loai HIEN HANH, nguon gan cho moi nam",Nhom,text,Nominal,Low/Lower middle/Upper middle/High income,o trong,47,0,4,,,,units.Income Group,units.parquet; WB,HIGH,CL004
+2_cat_ngang,bac_thu_nhap,"Bac thu nhap (1=thap ... 4=cao), theo nhom_thu_nhap_hien_hanh",Dan xuat,integer,Ordinal,1-4,o trong,47,0,4,1,4,0,nhom_thu_nhap_hien_hanh,Thu tu WB,HIGH,CL004
+2_cat_ngang,gdp_ppp_usd,"GDP PPP (USD, gia tri nguon)",Nguon,decimal,Continuous,> 0,o trong,45,2,45,5994600489.0,32004900000000.0,0,units.GDP PPP,README,HIGH,CL009
+2_cat_ngang,dan_so,"Dan so (nguoi, gia tri nguon)",Nguon,decimal,Continuous,> 0,o trong,47,0,47,449002.0,1417173173.0,0,units.Population,README,HIGH,CL003
+2_cat_ngang,gdp_dau_nguoi,"GDP PPP binh quan dau nguoi (USD, gia tri nguon)",Nguon,decimal,Continuous,> 0; = gdp_ppp_usd/dan_so,o trong,45,2,45,1999.536480873693,136004.7911822945,0,units.GDP PC,README + L01,HIGH,"CL003, CL009"
+2_cat_ngang,gdp_ppp_ty_usd,GDP PPP (ty USD),Dan xuat,decimal,Continuous,> 0,o trong,45,2,45,5.994600489,32004.9,0,gdp_ppp_usd,= gdp_ppp_usd / 1e9,HIGH,
+2_cat_ngang,dan_so_trieu,Dan so (trieu nguoi),Dan xuat,decimal,Continuous,> 0,o trong,47,0,47,0.449002,1417.173173,0,dan_so,= dan_so / 1e6,HIGH,CL003
+2_cat_ngang,ln_gdp_dau_nguoi,ln(GDP binh quan dau nguoi),Dan xuat,decimal,Continuous,so thuc,o trong,45,2,45,7.600670673118532,11.820445393379229,,gdp_dau_nguoi,= ln(gdp_dau_nguoi),HIGH,
+2_cat_ngang,do_da_dang,Diversity Share (trung binh nang luc chuan hoa),Nguon,decimal,Continuous,"[0,1]",o trong,47,0,47,0.013626728668071334,0.5003297740396992,0,unit_complexities.Diversity Share,README + L02,HIGH,
+2_cat_ngang,eci,Ecosystem Complexity Index,Nguon,decimal,Continuous,RULE NOT ESTABLISHED - DO NOT AUTO-CORRECT,o trong,47,0,47,-2.101624900475103,0.9903631473421762,,unit_complexities.Ecosystem Complexity Index,README (khong co mien),LOW,
+2_cat_ngang,coi,Complexity Outlook Index (quoc gia),Nguon,decimal,Continuous,RULE NOT ESTABLISHED - DO NOT AUTO-CORRECT,o trong,47,0,47,-4.3582905519355135,477.85357408770204,,unit_complexities.Complexity Outlook Index,README vi du 0.75 khong khop thang do du lieu,LOW,CL018
+2_cat_ngang,goi,Growth Outlook Index (quoc gia),Nguon,decimal,Continuous,RULE NOT ESTABLISHED - DO NOT AUTO-CORRECT,o trong,47,0,47,20.212159360695825,601.7963953229734,,unit_complexities.Growth Outlook Index,README vi du 0.82 khong khop thang do du lieu,LOW,CL018
+2_cat_ngang,hang_eci_the_gioi,Thu hang ECI trong 193 don vi (1 = cao nhat),Dan xuat,integer,Ordinal,1-193,o trong,47,0,47,1,168,0,eci (toan bo 193),rank(min) tren unit_complexities ca 193 don vi,HIGH,
+2_cat_ngang,hang_eci_chau_a,Thu hang ECI trong 47 nuoc chau A,Dan xuat,integer,Ordinal,1-47,o trong,47,0,47,1,47,0,eci,rank(min),HIGH,
+2_cat_ngang,sang_che,Bang sang che (tong dem phan so),Dan xuat,decimal,Continuous,>= 0; trong = khong co ban ghi,o trong,45,2,45,0.5,285985.03513828863,0,outputs (T),"Tong outputs.Outputs (Fractional), T",MEDIUM,"CL002, CL005"
+2_cat_ngang,sang_che_tren_trieu_dan,sang_che tren 1 trieu dan,Dan xuat,decimal,Continuous,>= 0,o trong,45,2,45,0.059353144502886826,2754.8633938434186,0,"sang_che, dan_so_trieu",= sang_che / dan_so_trieu,HIGH,CL003
+2_cat_ngang,ln_sang_che,ln(1 + sang_che),Dan xuat,decimal,Continuous,>= 0,o trong,45,2,45,0.4054651081081644,12.563698260422052,0,sang_che,= ln(1 + sang_che),HIGH,
+2_cat_ngang,bai_bao_kh,Cong bo khoa hoc (tong dem phan so),Dan xuat,decimal,Continuous,>= 0; trong = khong co ban ghi,o trong,47,0,47,2.2576335877862594,283330.8572136939,0,outputs (S),"Tong outputs.Outputs (Fractional), S",MEDIUM,CL002
+2_cat_ngang,bai_bao_kh_tren_trieu_dan,bai_bao_kh tren 1 trieu dan,Dan xuat,decimal,Continuous,>= 0,o trong,47,0,47,0.19741388324405296,839.9059165216004,0,"bai_bao_kh, dan_so_trieu",= bai_bao_kh / dan_so_trieu,HIGH,CL003
+2_cat_ngang,ln_bai_bao_kh,ln(1 + bai_bao_kh),Dan xuat,decimal,Continuous,>= 0,o trong,47,0,47,1.1810010384733984,12.554374129950796,0,bai_bao_kh,= ln(1 + bai_bao_kh),HIGH,
+2_cat_ngang,nhan_hieu,Nhan hieu (tong dem phan so),Dan xuat,decimal,Continuous,>= 0; trong = khong co ban ghi,o trong,44,3,44,1.6666666666666665,84524.90347277872,0,outputs (E),"Tong outputs.Outputs (Fractional), E",MEDIUM,"CL002, CL005, CL006, CL010"
+2_cat_ngang,nhan_hieu_tren_trieu_dan,nhan_hieu tren 1 trieu dan,Dan xuat,decimal,Continuous,>= 0,o trong,44,3,44,0.13700374819074151,1099.2408437486943,0,"nhan_hieu, dan_so_trieu",= nhan_hieu / dan_so_trieu,HIGH,CL003
+2_cat_ngang,ln_nhan_hieu,ln(1 + nhan_hieu),Dan xuat,decimal,Continuous,>= 0,o trong,44,3,44,0.9808292530117262,11.344813316342135,0,nhan_hieu,= ln(1 + nhan_hieu),HIGH,
+2_cat_ngang,xuat_khau_ty_usd,Xuat khau (ty USD),Dan xuat,decimal,Continuous,>= 0,o trong,47,0,47,0.12162188460893535,2513.1103082480035,0,outputs (P),"Tong outputs.Outputs (Fractional), P / 1e9",HIGH,
+2_cat_ngang,xuat_khau_ty_usd_tren_trieu_dan,xuat_khau_ty_usd tren 1 trieu dan,Dan xuat,decimal,Continuous,>= 0,o trong,47,0,47,0.009075739393839443,44.786072208083766,0,"xuat_khau_ty_usd, dan_so_trieu",= xuat_khau_ty_usd / dan_so_trieu,HIGH,CL003
+2_cat_ngang,ln_xuat_khau_ty_usd,ln(1 + xuat_khau_ty_usd),Dan xuat,decimal,Continuous,>= 0,o trong,47,0,47,0.11477574906301774,7.829674265772327,0,xuat_khau_ty_usd,= ln(1 + xuat_khau_ty_usd),HIGH,
+2_cat_ngang,so_nang_luc_cong_nghe,So linh vuc co nang luc - cong_nghe,Dan xuat,integer,Continuous,>= 0,o trong,47,0,23,0,471,0,capabilities,Dem capabilities.Innovation Capability (Binary),HIGH,
+2_cat_ngang,so_nang_luc_khoa_hoc,So linh vuc co nang luc - khoa_hoc,Dan xuat,integer,Continuous,>= 0,o trong,47,0,44,0,607,0,capabilities,Dem capabilities.Innovation Capability (Binary),HIGH,
+2_cat_ngang,so_nang_luc_san_xuat,So linh vuc co nang luc - san_xuat,Dan xuat,integer,Continuous,>= 0,o trong,47,0,44,0,719,0,capabilities,Dem capabilities.Innovation Capability (Binary),HIGH,
+2_cat_ngang,so_nang_luc_khoi_nghiep,So linh vuc co nang luc - khoi_nghiep,Dan xuat,integer,Continuous,>= 0,o trong,47,0,28,0,521,0,capabilities,Dem capabilities.Innovation Capability (Binary),HIGH,
+2_cat_ngang,so_nang_luc_tong,Tong so linh vuc co nang luc,Dan xuat,integer,Continuous,0-2508,o trong,47,0,45,3,2318,0,so_nang_luc_*,Tong 4 chieu,HIGH,
+2_cat_ngang,so_nang_luc_tuong_doi,So linh vuc co nang luc tuong doi,Dan xuat,integer,Continuous,0-2508,o trong,47,0,46,3,1482,0,capabilities,Dem Relative Capability (Binary),HIGH,
+2_cat_ngang,so_nang_luc_tuyet_doi,So linh vuc co nang luc tuyet doi,Dan xuat,integer,Continuous,0-2508,o trong,47,0,30,0,2318,0,capabilities,Dem Absolute Capability (Binary),HIGH,CL007
+2_cat_ngang,flag_dan_so_lap_lai,FLAG: dan so dung bang nam truoc (nghi chuyen tiep gia tri),Flag,integer,Nominal,0/1,o trong,47,0,1,1,1,0,dan_so,L08,MEDIUM,CL003
+2_cat_ngang,ty_le_bat_thuong_sang_che,FLAG: ty trong sang_che den tu dong co Fractional > Full,Flag,decimal,Continuous,"[0,1]",o trong,45,2,34,0.0,0.6105750292454152,0,outputs (T),L04,MEDIUM,CL005
+2_cat_ngang,ty_le_bat_thuong_nhan_hieu,FLAG: ty trong nhan_hieu den tu dong co Fractional > Full,Flag,decimal,Continuous,"[0,1]",o trong,44,3,21,0.0,0.6224380399823422,0,outputs (E),L04,MEDIUM,CL005
+2_cat_ngang,eci_2013,eci nam 2013,Dan xuat,decimal,Continuous,RULE NOT ESTABLISHED - DO NOT AUTO-CORRECT,o trong,47,0,47,-2.702305978364542,0.9039497301740211,,eci,Gia tri nam goc,HIGH,
+2_cat_ngang,do_da_dang_2013,do_da_dang nam 2013,Dan xuat,decimal,Continuous,"[0,1]",o trong,47,0,47,0.008867963307672568,0.513241084529246,0,do_da_dang,Gia tri nam goc,HIGH,
+2_cat_ngang,so_nang_luc_tong_2013,so_nang_luc_tong nam 2013,Dan xuat,integer,Continuous,0-2508,o trong,47,0,44,5,2031,0,so_nang_luc_tong,Gia tri nam goc,HIGH,
+2_cat_ngang,gdp_dau_nguoi_2013,gdp_dau_nguoi nam 2013,Dan xuat,decimal,Continuous,> 0; = gdp_ppp_usd/dan_so,o trong,45,2,45,2856.2340296511693,128471.5654770005,0,gdp_dau_nguoi,Gia tri nam goc,HIGH,
+2_cat_ngang,thay_doi_eci_10_nam,ECI 2023 - ECI 2013,Dan xuat,decimal,Continuous,so thuc,o trong,47,0,47,-0.7678200724084413,0.7087738141575932,,eci,= eci - eci_2013,HIGH,
+2_cat_ngang,thay_doi_do_da_dang_10_nam,Do da dang 2023 - 2013,Dan xuat,decimal,Continuous,"[-1,1]",o trong,47,0,47,-0.01642349505672769,0.09609321982207587,,do_da_dang,hieu,HIGH,
+2_cat_ngang,thay_doi_so_nang_luc_10_nam,So nang luc 2023 - 2013,Dan xuat,integer,Continuous,"[-2508,2508]",o trong,47,0,44,-69,363,,so_nang_luc_tong,hieu,HIGH,
+2_cat_ngang,tang_truong_gdp_dau_nguoi_bq_10_nam,Tang truong GDP/nguoi binh quan nam 2013-2023 (%),Dan xuat,decimal,Continuous,so thuc,o trong,45,2,45,-4.1483465622952576,5.649948929063386,,gdp_dau_nguoi,= 100*((x2023/x2013)^(1/10) - 1),HIGH,CL003
+2_cat_ngang,tuong_dong_voi_viet_nam,Proximity voi Viet Nam (2023),Dan xuat,decimal,Continuous,"[0,1]; trong o dong VN",o trong,46,1,46,0.019324375401190003,0.2979872005478029,0,unit_proximities.Proximity,unit_proximities,HIGH,CL015
+2_cat_ngang,flag_ngoai_lai,FLAG: co it nhat 1 bien chinh co |robust z| > 3.5,Flag,integer,Nominal,0/1,o trong,47,0,1,0,0,0,nhieu bien,Iglewicz & Hoaglin (1993),HIGH,CL016
+2_cat_ngang,bien_ngoai_lai,Ten cac bien bi FLAG ngoai lai (khong = khong co),Flag,text,Nominal,danh sach hoac 'khong',o trong,47,0,1,,,,,CL016,HIGH,CL016
+3_asean_linh_vuc,ma_qg,Ma quoc gia ISO 3166-1 alpha-2,ID,text,ID,2 chu in hoa,o trong,27588,0,11,,,,units.Unit,Quy uoc ma ISO,HIGH,
+3_asean_linh_vuc,ten_qg,"Ten quoc gia (nguyen ban nguon, UTF-8)",Nhan,text,Nominal,Khong rong,o trong,27588,0,11,,,,units.Unit Name,units.parquet,HIGH,CL012
+3_asean_linh_vuc,ma_linh_vuc,Ma linh vuc (tien to T/S/P/E = chieu),ID,text,ID,^[TSPE] - ...,o trong,27588,0,2508,,,,Field ID,README,HIGH,
+3_asean_linh_vuc,ten_linh_vuc,Ten linh vuc (5 ten trung lap tren 11 ma khac nhau),Nhan,text,Nominal,Khong rong,o trong,27588,0,2492,,,,fields.Field Name,fields.parquet,HIGH,"CL011, CL012"
+3_asean_linh_vuc,ma_nhom_linh_vuc,Ma nhom linh vuc,Nhom,text,Nominal,44 nhom,o trong,27588,0,45,,,,fields.Domain ID,fields.parquet,HIGH,
+3_asean_linh_vuc,nhom_linh_vuc,Ten nhom linh vuc,Nhom,text,Nominal,44 nhom,o trong,27588,0,44,,,,fields.Domain Name,fields.parquet,HIGH,
+3_asean_linh_vuc,chieu,Chieu doi moi,Nhom,text,Nominal,Technology; Science; Production; Entrepreneurial,o trong,27588,0,4,,,,fields.Dimension Name,README,HIGH,
+3_asean_linh_vuc,san_luong_2013,San luong 2013 (dem toan phan; P = USD),Nguon,decimal,Continuous,>= 0; trong = khong co ban ghi ca quoc gia-nam-chieu,o trong,26570,1018,7408,0.0,63036641659.618355,0,outputs.Outputs,README,HIGH,"CL001, CL002, CL006"
+3_asean_linh_vuc,san_luong_2023,San luong 2023 (dem toan phan; P = USD),Nguon,decimal,Continuous,>= 0; trong = khong co ban ghi ca quoc gia-nam-chieu,o trong,26570,1018,7648,0.0,63265714401.132256,0,outputs.Outputs,README,HIGH,"CL001, CL002, CL006"
+3_asean_linh_vuc,san_luong_phan_so_2013,San luong 2013 (dem phan so),Nguon,decimal,Continuous,>= 0; ky vong <= san_luong,o trong,26570,1018,11580,0.0,63036641659.618355,0,outputs.Outputs (Fractional),README (suy ra),MEDIUM,"CL001, CL002, CL005"
+3_asean_linh_vuc,san_luong_phan_so_2023,San luong 2023 (dem phan so),Nguon,decimal,Continuous,>= 0; ky vong <= san_luong,o trong,26570,1018,13174,0.0,63265714401.132256,0,outputs.Outputs (Fractional),README (suy ra),MEDIUM,"CL001, CL002, CL005"
+3_asean_linh_vuc,nang_luc_chuan_hoa_2013,Nang luc chuan hoa 2013,Nguon,decimal,Continuous,"[0,1]",o trong,27588,0,14775,0.0,0.9866739590231175,0,capabilities.Innovation Capability (Normalized),README,HIGH,
+3_asean_linh_vuc,nang_luc_chuan_hoa_2023,Nang luc chuan hoa 2023,Nguon,decimal,Continuous,"[0,1]",o trong,27588,0,16506,0.0,0.9941512168532436,0,capabilities.Innovation Capability (Normalized),README,HIGH,
+3_asean_linh_vuc,co_nang_luc_2013,Co nang luc 2013,Nguon,integer,Nominal,0/1,o trong,27588,0,2,0,1,0,capabilities.Innovation Capability (Binary),README,HIGH,CL013
+3_asean_linh_vuc,co_nang_luc_2023,Co nang luc 2023,Nguon,integer,Nominal,0/1,o trong,27588,0,2,0,1,0,capabilities.Innovation Capability (Binary),README,HIGH,CL013
+3_asean_linh_vuc,nang_luc_tuong_doi_2013,Nang luc tuong doi 2013,Nguon,integer,Nominal,0/1,o trong,27588,0,2,0,1,0,capabilities.Relative Capability (Binary),README,HIGH,CL013
+3_asean_linh_vuc,nang_luc_tuong_doi_2023,Nang luc tuong doi 2023,Nguon,integer,Nominal,0/1,o trong,27588,0,2,0,1,0,capabilities.Relative Capability (Binary),README,HIGH,CL013
+3_asean_linh_vuc,nang_luc_tuyet_doi_2013,Nang luc tuyet doi 2013,Nguon,integer,Nominal,0/1,o trong,27588,0,2,0,1,0,capabilities.Absolute Capability (Binary),README,HIGH,"CL007, CL013"
+3_asean_linh_vuc,nang_luc_tuyet_doi_2023,Nang luc tuyet doi 2023,Nguon,integer,Nominal,0/1,o trong,27588,0,2,0,1,0,capabilities.Absolute Capability (Binary),README,HIGH,"CL007, CL013"
+3_asean_linh_vuc,mat_do_lien_quan_2013,Relatedness density 2013,Nguon,decimal,Continuous,"[0,1]; trong = cau truc (L09)",o trong,27588,0,27563,0.0,0.950364633563121,0,densities.Relatedness Density,README,HIGH,CL008
+3_asean_linh_vuc,mat_do_lien_quan_2023,Relatedness density 2023,Nguon,decimal,Continuous,"[0,1]; trong = cau truc (L09)",o trong,27577,11,27546,0.0,0.8199135886062807,0,densities.Relatedness Density,README,HIGH,CL008
+3_asean_linh_vuc,tiem_nang_2013,Potential 2013,Nguon,decimal,Continuous,>= 0,o trong,27588,0,27513,0.0,48897158966.236336,0,potentials.Potential,README,HIGH,
+3_asean_linh_vuc,tiem_nang_2023,Potential 2023,Nguon,decimal,Continuous,>= 0,o trong,27588,0,27463,0.0,19840380381.25992,0,potentials.Potential,README,HIGH,
+3_asean_linh_vuc,gia_nhap_moi,OUTCOME: 0 nam 2013 -> 1 nam 2023 (trong neu da co nang luc nam 2013),Outcome (dan xuat),integer,Nominal,0/1; trong = cau truc,o trong,24334,3254,2,0,1,0,co_nang_luc_*,= co_nang_luc_2023 khi co_nang_luc_2013 = 0,HIGH,
+3_asean_linh_vuc,roi_bo,OUTCOME: 1 nam 2013 -> 0 nam 2023 (trong neu chua co nam 2013),Outcome (dan xuat),integer,Nominal,0/1; trong = cau truc,o trong,3254,24334,2,0,1,0,co_nang_luc_*,= 1 - co_nang_luc_2023 khi co_nang_luc_2013 = 1,HIGH,
+3_asean_linh_vuc,ln_tiem_nang_2023,ln(1 + tiem_nang_2023),Dan xuat,decimal,Continuous,>= 0,o trong,27588,0,27463,0.0,23.710985111112286,0,tiem_nang_2023,ln1p,HIGH,
+3_asean_linh_vuc,ln_san_luong_2023,ln(1 + san_luong_2023),Dan xuat,decimal,Continuous,>= 0,o trong,26570,1018,7648,0.0,24.870609382741257,0,san_luong_2023,ln1p,HIGH,CL001
+3_asean_linh_vuc,chenh_lech_tiem_nang,ln_san_luong_2023 - ln_tiem_nang_2023 (am = duoi tiem nang),Dan xuat,decimal,Continuous,so thuc,o trong,26570,1018,26511,-21.197285017866193,19.390820585083993,,"ln_san_luong_2023, ln_tiem_nang_2023",hieu,HIGH,CL001
+3_asean_linh_vuc,do_phuc_tap_linh_vuc_2023,Capability Complexity Index 2023,Nguon,decimal,Continuous,RULE NOT ESTABLISHED - DO NOT AUTO-CORRECT,o trong,27577,11,2507,-10.602652253034732,6.163911244604097,,field_complexities.Capability Complexity Index,README,LOW,CL008
+3_asean_linh_vuc,do_pho_bien_linh_vuc_2023,Ubiquity Share 2023,Nguon,decimal,Continuous,"[0,1]",o trong,27577,11,2507,0.010057309039644602,0.46346573829249443,0,field_complexities.Ubiquity Share,README,HIGH,CL008
+3_asean_linh_vuc,flag_phan_so_vuot_toan_phan_2013,FLAG: Fractional > Full nam 2013 (L04),Flag,integer,Nominal,0/1,o trong,27588,0,2,0,1,0,outputs,L04,MEDIUM,CL005
+3_asean_linh_vuc,flag_phan_so_vuot_toan_phan_2023,FLAG: Fractional > Full nam 2023 (L04),Flag,integer,Nominal,0/1,o trong,27588,0,2,0,1,0,outputs,L04,MEDIUM,CL005
+3_asean_linh_vuc,flag_tuyet_doi_khong_nhat_quan_2023,FLAG: Absolute=1 nhung Innovation=0 (L03),Flag,integer,Nominal,0/1,o trong,27588,0,2,0,1,0,capabilities,L03,LOW,CL007
+4_viet_nam_linh_vuc,ma_qg,Ma quoc gia ISO 3166-1 alpha-2,ID,text,ID,2 chu in hoa,o trong,2508,0,1,,,,units.Unit,Quy uoc ma ISO,HIGH,
+4_viet_nam_linh_vuc,ten_qg,"Ten quoc gia (nguyen ban nguon, UTF-8)",Nhan,text,Nominal,Khong rong,o trong,2508,0,1,,,,units.Unit Name,units.parquet,HIGH,CL012
+4_viet_nam_linh_vuc,ma_linh_vuc,Ma linh vuc (tien to T/S/P/E = chieu),ID,text,ID,^[TSPE] - ...,o trong,2508,0,2508,,,,Field ID,README,HIGH,
+4_viet_nam_linh_vuc,ten_linh_vuc,Ten linh vuc (5 ten trung lap tren 11 ma khac nhau),Nhan,text,Nominal,Khong rong,o trong,2508,0,2492,,,,fields.Field Name,fields.parquet,HIGH,"CL011, CL012"
+4_viet_nam_linh_vuc,ma_nhom_linh_vuc,Ma nhom linh vuc,Nhom,text,Nominal,44 nhom,o trong,2508,0,45,,,,fields.Domain ID,fields.parquet,HIGH,
+4_viet_nam_linh_vuc,nhom_linh_vuc,Ten nhom linh vuc,Nhom,text,Nominal,44 nhom,o trong,2508,0,44,,,,fields.Domain Name,fields.parquet,HIGH,
+4_viet_nam_linh_vuc,chieu,Chieu doi moi,Nhom,text,Nominal,Technology; Science; Production; Entrepreneurial,o trong,2508,0,4,,,,fields.Dimension Name,README,HIGH,
+4_viet_nam_linh_vuc,san_luong_2013,San luong 2013 (dem toan phan; P = USD),Nguon,decimal,Continuous,>= 0; trong = khong co ban ghi ca quoc gia-nam-chieu,o trong,2508,0,883,0.0,17897697357.31842,0,outputs.Outputs,README,HIGH,"CL001, CL002, CL006"
+4_viet_nam_linh_vuc,san_luong_2023,San luong 2023 (dem toan phan; P = USD),Nguon,decimal,Continuous,>= 0; trong = khong co ban ghi ca quoc gia-nam-chieu,o trong,2508,0,929,0.0,59427265089.276024,0,outputs.Outputs,README,HIGH,"CL001, CL002, CL006"
+4_viet_nam_linh_vuc,san_luong_phan_so_2013,San luong 2013 (dem phan so),Nguon,decimal,Continuous,>= 0; ky vong <= san_luong,o trong,2508,0,1375,0.0,17897697357.31842,0,outputs.Outputs (Fractional),README (suy ra),MEDIUM,"CL001, CL002, CL005"
+4_viet_nam_linh_vuc,san_luong_phan_so_2023,San luong 2023 (dem phan so),Nguon,decimal,Continuous,>= 0; ky vong <= san_luong,o trong,2508,0,1786,0.0,59427265089.276024,0,outputs.Outputs (Fractional),README (suy ra),MEDIUM,"CL001, CL002, CL005"
+4_viet_nam_linh_vuc,nang_luc_chuan_hoa_2013,Nang luc chuan hoa 2013,Nguon,decimal,Continuous,"[0,1]",o trong,2508,0,1796,0.0,0.9669395507912959,0,capabilities.Innovation Capability (Normalized),README,HIGH,
+4_viet_nam_linh_vuc,nang_luc_chuan_hoa_2023,Nang luc chuan hoa 2023,Nguon,decimal,Continuous,"[0,1]",o trong,2508,0,2067,0.0,0.9531111066166179,0,capabilities.Innovation Capability (Normalized),README,HIGH,
+4_viet_nam_linh_vuc,co_nang_luc_2013,Co nang luc 2013,Nguon,integer,Nominal,0/1,o trong,2508,0,2,0,1,0,capabilities.Innovation Capability (Binary),README,HIGH,CL013
+4_viet_nam_linh_vuc,co_nang_luc_2023,Co nang luc 2023,Nguon,integer,Nominal,0/1,o trong,2508,0,2,0,1,0,capabilities.Innovation Capability (Binary),README,HIGH,CL013
+4_viet_nam_linh_vuc,nang_luc_tuong_doi_2013,Nang luc tuong doi 2013,Nguon,integer,Nominal,0/1,o trong,2508,0,2,0,1,0,capabilities.Relative Capability (Binary),README,HIGH,CL013
+4_viet_nam_linh_vuc,nang_luc_tuong_doi_2023,Nang luc tuong doi 2023,Nguon,integer,Nominal,0/1,o trong,2508,0,2,0,1,0,capabilities.Relative Capability (Binary),README,HIGH,CL013
+4_viet_nam_linh_vuc,nang_luc_tuyet_doi_2013,Nang luc tuyet doi 2013,Nguon,integer,Nominal,0/1,o trong,2508,0,2,0,1,0,capabilities.Absolute Capability (Binary),README,HIGH,"CL007, CL013"
+4_viet_nam_linh_vuc,nang_luc_tuyet_doi_2023,Nang luc tuyet doi 2023,Nguon,integer,Nominal,0/1,o trong,2508,0,2,0,1,0,capabilities.Absolute Capability (Binary),README,HIGH,"CL007, CL013"
+4_viet_nam_linh_vuc,mat_do_lien_quan_2013,Relatedness density 2013,Nguon,decimal,Continuous,"[0,1]; trong = cau truc (L09)",o trong,2508,0,2508,0.038651249149880905,0.9214099273062311,0,densities.Relatedness Density,README,HIGH,CL008
+4_viet_nam_linh_vuc,mat_do_lien_quan_2023,Relatedness density 2023,Nguon,decimal,Continuous,"[0,1]; trong = cau truc (L09)",o trong,2507,1,2507,0.06342680873252425,0.757049572866892,0,densities.Relatedness Density,README,HIGH,CL008
+4_viet_nam_linh_vuc,tiem_nang_2013,Potential 2013,Nguon,decimal,Continuous,>= 0,o trong,2508,0,2505,0.0,3864692565.7615848,0,potentials.Potential,README,HIGH,
+4_viet_nam_linh_vuc,tiem_nang_2023,Potential 2023,Nguon,decimal,Continuous,>= 0,o trong,2508,0,2502,0.0,4986919933.861363,0,potentials.Potential,README,HIGH,
+4_viet_nam_linh_vuc,gia_nhap_moi,OUTCOME: 0 nam 2013 -> 1 nam 2023 (trong neu da co nang luc nam 2013),Outcome (dan xuat),integer,Nominal,0/1; trong = cau truc,o trong,2321,187,2,0,1,0,co_nang_luc_*,= co_nang_luc_2023 khi co_nang_luc_2013 = 0,HIGH,
+4_viet_nam_linh_vuc,roi_bo,OUTCOME: 1 nam 2013 -> 0 nam 2023 (trong neu chua co nam 2013),Outcome (dan xuat),integer,Nominal,0/1; trong = cau truc,o trong,187,2321,2,0,1,0,co_nang_luc_*,= 1 - co_nang_luc_2023 khi co_nang_luc_2013 = 1,HIGH,
+4_viet_nam_linh_vuc,ln_tiem_nang_2023,ln(1 + tiem_nang_2023),Dan xuat,decimal,Continuous,>= 0,o trong,2508,0,2502,0.0,22.330084308611386,0,tiem_nang_2023,ln1p,HIGH,
+4_viet_nam_linh_vuc,ln_san_luong_2023,ln(1 + san_luong_2023),Dan xuat,decimal,Continuous,>= 0,o trong,2508,0,929,0.0,24.808018966256753,0,san_luong_2023,ln1p,HIGH,CL001
+4_viet_nam_linh_vuc,chenh_lech_tiem_nang,ln_san_luong_2023 - ln_tiem_nang_2023 (am = duoi tiem nang),Dan xuat,decimal,Continuous,so thuc,o trong,2508,0,2508,-19.059547617173873,17.921715089926405,,"ln_san_luong_2023, ln_tiem_nang_2023",hieu,HIGH,CL001
+4_viet_nam_linh_vuc,do_phuc_tap_linh_vuc_2023,Capability Complexity Index 2023,Nguon,decimal,Continuous,RULE NOT ESTABLISHED - DO NOT AUTO-CORRECT,o trong,2507,1,2507,-10.602652253034732,6.163911244604097,,field_complexities.Capability Complexity Index,README,LOW,CL008
+4_viet_nam_linh_vuc,do_pho_bien_linh_vuc_2023,Ubiquity Share 2023,Nguon,decimal,Continuous,"[0,1]",o trong,2507,1,2507,0.010057309039644602,0.46346573829249443,0,field_complexities.Ubiquity Share,README,HIGH,CL008
+4_viet_nam_linh_vuc,flag_phan_so_vuot_toan_phan_2013,FLAG: Fractional > Full nam 2013 (L04),Flag,integer,Nominal,0/1,o trong,2508,0,2,0,1,0,outputs,L04,MEDIUM,CL005
+4_viet_nam_linh_vuc,flag_phan_so_vuot_toan_phan_2023,FLAG: Fractional > Full nam 2023 (L04),Flag,integer,Nominal,0/1,o trong,2508,0,2,0,1,0,outputs,L04,MEDIUM,CL005
+4_viet_nam_linh_vuc,flag_tuyet_doi_khong_nhat_quan_2023,FLAG: Absolute=1 nhung Innovation=0 (L03),Flag,integer,Nominal,0/1,o trong,2508,0,1,0,0,0,capabilities,L03,LOW,CL007

@@ -1,0 +1,24 @@
+dataset,variable,level,count
+cross,tieu_vung,Dong A,5
+cross,tieu_vung,Dong Nam A,11
+cross,tieu_vung,Nam A,9
+cross,tieu_vung,Tay A,17
+cross,tieu_vung,Trung A,5
+cross,nhom,ASEAN khac,10
+cross,nhom,Chau A khac,36
+cross,nhom,Viet Nam,1
+cross,asean_thoi_diem,0,37
+cross,asean_thoi_diem,1,10
+cross,nhom_thu_nhap_hien_hanh,High income,12
+cross,nhom_thu_nhap_hien_hanh,Low income,4
+cross,nhom_thu_nhap_hien_hanh,Lower middle income,17
+cross,nhom_thu_nhap_hien_hanh,Upper middle income,14
+vn,gia_nhap_moi,0.0,2151
+vn,gia_nhap_moi,1.0,170
+vn,gia_nhap_moi,Missing,187
+vn,chieu,Entrepreneurial,538
+vn,chieu,Production,862
+vn,chieu,Science,628
+vn,chieu,Technology,480
+panel,flag_dan_so_lap_lai,0,1034
+panel,flag_dan_so_lap_lai,1,47

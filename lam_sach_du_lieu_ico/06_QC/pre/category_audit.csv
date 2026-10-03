@@ -1,0 +1,12 @@
+table,variable,n_unique,values,leading_trailing_space,case_only_variants,numeric_text_mixed
+units,Unit,47,AE (23); JO (23); JP (23); KG (23); KH (23); KP (23); KR (23); KW (23); KZ (23); LA (23); LB (23); LK (23) ...,0,0,0
+units,Unit Name,47,United Arab Emirates (the) (23); Jordan (23); Japan (23); Kyrgyzstan (23); Cambodia (23); Democratic People's Republic of Korea (23); Republic of Korea (the) (23); Kuwait (23); Kazakhstan (23); Lao People's Democratic Republic (the) (23); Lebanon (23); Sri Lanka (23) ...,0,0,0
+units,Continent,2,West and Central Asia (713); East Asia (368),0,0,0
+units,Income Group,4,Lower middle income (391); Upper middle income (322); High income (276); Low income (92),0,0,0
+fields,Dimension Name,4,Production (862); Science (628); Entrepreneurial (538); Technology (480),0,0,0
+fields,Domain ID,45,P - 9 (160); P - 6 (131); S - 2 (128); P - 2 (112); P - 4 (112); P - 8 (112); S - 1 (104); T - 42 (93); S - 3 (90); E - I (76); S - 6 (73); E - F (62) ...,0,0,0
+fields,Domain Name,44,"Machinery and transportation (160); Wood, paper and textiles (131); Medical and health sciences (128); Plant products and food processing (112); Chemicals and pharmaceuticals (112); Base metals and metal products (112); Social sciences (104); Engines and transport (93); Engineering and energy (90); Chemicals (83); Research and technology (76); Agricultural and environmental sciences (73) ...",0,0,0
+outputs,Dimension,4,P (931822); S (316567); E (210135); T (151209),0,0,0
+units,Unit Name [so nuoc thay doi qua 23 nam],0,,0,0,0
+units,Continent [so nuoc thay doi qua 23 nam],0,,0,0,0
+units,Income Group [so nuoc thay doi qua 23 nam],0,,0,0,0

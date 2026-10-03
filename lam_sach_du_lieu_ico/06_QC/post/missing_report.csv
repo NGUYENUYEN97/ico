@@ -1,0 +1,48 @@
+dataset,variable,N,valid_N,missing_N,missing_pct,type_of_missing,interpretation
+panel,gdp_ppp_usd,1081,1035,46,4.26,system missing,"KP, YE: nguon khong co GDP (CL009)"
+panel,gdp_dau_nguoi,1081,1035,46,4.26,system missing,"KP, YE (CL009)"
+panel,gdp_ppp_ty_usd,1081,1035,46,4.26,dan xuat tu system missing,"KP, YE"
+panel,ln_gdp_dau_nguoi,1081,1035,46,4.26,dan xuat tu system missing,"KP, YE"
+panel,tang_truong_gdp_dau_nguoi,1081,990,91,8.42,structural + system,"Nam 2001 khong co nam truoc (47) + KP, YE (44)"
+panel,sang_che,1081,1028,53,4.9,no coverage (khong phai 0),Khong co ban ghi T cho quoc gia-nam (CL002)
+panel,sang_che_tren_trieu_dan,1081,1028,53,4.9,no coverage (khong phai 0),Khong co ban ghi T cho quoc gia-nam (CL002)
+panel,ln_sang_che,1081,1028,53,4.9,no coverage (khong phai 0),Khong co ban ghi T cho quoc gia-nam (CL002)
+panel,bai_bao_kh,1081,1070,11,1.02,no coverage (khong phai 0),Khong co ban ghi S (CL002)
+panel,bai_bao_kh_tren_trieu_dan,1081,1070,11,1.02,no coverage (khong phai 0),Khong co ban ghi S (CL002)
+panel,ln_bai_bao_kh,1081,1070,11,1.02,no coverage (khong phai 0),Khong co ban ghi S (CL002)
+panel,nhan_hieu,1081,980,101,9.34,no coverage (khong phai 0),Khong co ban ghi E (CL002)
+panel,nhan_hieu_tren_trieu_dan,1081,980,101,9.34,no coverage (khong phai 0),Khong co ban ghi E (CL002)
+panel,ln_nhan_hieu,1081,980,101,9.34,no coverage (khong phai 0),Khong co ban ghi E (CL002)
+panel,ty_le_bat_thuong_sang_che,1081,1028,53,4.9,dan xuat tu no coverage,CL002
+panel,ty_le_bat_thuong_nhan_hieu,1081,980,101,9.34,dan xuat tu no coverage,CL002
+cross,gdp_ppp_usd,47,45,2,4.26,system missing,"KP, YE: nguon khong co GDP (CL009)"
+cross,gdp_dau_nguoi,47,45,2,4.26,system missing,"KP, YE (CL009)"
+cross,gdp_ppp_ty_usd,47,45,2,4.26,dan xuat tu system missing,"KP, YE"
+cross,ln_gdp_dau_nguoi,47,45,2,4.26,dan xuat tu system missing,"KP, YE"
+cross,sang_che,47,45,2,4.26,no coverage (khong phai 0),Khong co ban ghi T cho quoc gia-nam (CL002)
+cross,sang_che_tren_trieu_dan,47,45,2,4.26,no coverage (khong phai 0),Khong co ban ghi T cho quoc gia-nam (CL002)
+cross,ln_sang_che,47,45,2,4.26,no coverage (khong phai 0),Khong co ban ghi T cho quoc gia-nam (CL002)
+cross,nhan_hieu,47,44,3,6.38,no coverage (khong phai 0),Khong co ban ghi E (CL002)
+cross,nhan_hieu_tren_trieu_dan,47,44,3,6.38,no coverage (khong phai 0),Khong co ban ghi E (CL002)
+cross,ln_nhan_hieu,47,44,3,6.38,no coverage (khong phai 0),Khong co ban ghi E (CL002)
+cross,ty_le_bat_thuong_sang_che,47,45,2,4.26,dan xuat tu no coverage,CL002
+cross,ty_le_bat_thuong_nhan_hieu,47,44,3,6.38,dan xuat tu no coverage,CL002
+cross,gdp_dau_nguoi_2013,47,45,2,4.26,dan xuat tu system missing,"KP, YE"
+cross,tang_truong_gdp_dau_nguoi_bq_10_nam,47,45,2,4.26,dan xuat tu system missing,"KP, YE"
+cross,tuong_dong_voi_viet_nam,47,46,1,2.13,structural missing,Dong Viet Nam (CL015)
+field,san_luong_2013,27588,26570,1018,3.69,no coverage (khong phai 0),TL: chieu T va E khong co ban ghi (CL002)
+field,san_luong_2023,27588,26570,1018,3.69,no coverage (khong phai 0),TL: chieu T va E (CL002)
+field,san_luong_phan_so_2013,27588,26570,1018,3.69,no coverage (khong phai 0),TL: T va E (CL002)
+field,san_luong_phan_so_2023,27588,26570,1018,3.69,no coverage (khong phai 0),TL: T va E (CL002)
+field,mat_do_lien_quan_2023,27588,27577,11,0.04,structural missing,CL008
+field,gia_nhap_moi,27588,24334,3254,11.79,structural missing,Da co nang luc nam 2013 -> khong thuoc tap nguy co gia nhap
+field,roi_bo,27588,3254,24334,88.21,structural missing,Chua co nang luc nam 2013 -> khong the roi bo
+field,ln_san_luong_2023,27588,26570,1018,3.69,dan xuat tu no coverage,CL002
+field,chenh_lech_tiem_nang,27588,26570,1018,3.69,dan xuat tu no coverage,CL002
+field,do_phuc_tap_linh_vuc_2023,27588,27577,11,0.04,structural missing,CL008
+field,do_pho_bien_linh_vuc_2023,27588,27577,11,0.04,structural missing,CL008
+vn,mat_do_lien_quan_2023,2508,2507,1,0.04,structural missing,CL008
+vn,gia_nhap_moi,2508,2321,187,7.46,structural missing,Da co nang luc nam 2013 -> khong thuoc tap nguy co gia nhap
+vn,roi_bo,2508,187,2321,92.54,structural missing,Chua co nang luc nam 2013 -> khong the roi bo
+vn,do_phuc_tap_linh_vuc_2023,2508,2507,1,0.04,structural missing,CL008
+vn,do_pho_bien_linh_vuc_2023,2508,2507,1,0.04,structural missing,CL008

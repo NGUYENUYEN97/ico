@@ -1,5 +1,13 @@
 # Dữ liệu thô cho jamovi / JASP: Việt Nam – ASEAN – châu Á
 
+> **ĐÃ ĐƯỢC THAY THẾ bởi `lam_sach_du_lieu_ico/02_CLEAN_DATA_CANDIDATE/`.** Phiên bản trong thư mục này có các thay đổi không được ghi log:
+> - 165 quốc gia-năm-chiều không có bản ghi nào bị gán 0; đúng ra phải là missing.
+> - Tên riêng bị bỏ dấu (ASCII).
+> - Số liệu bị làm tròn đến 6 chữ số thập phân.
+> - Biến `nhom_thu_nhap` thực chất là phân loại hiện hành nhưng bị gán cho mọi năm.
+>
+> Với file 3, các phân tích gộp nhiều nước phải đưa hiệu ứng quốc gia vào mô hình. Xem `lam_sach_du_lieu_ico/00_BAO_CAO_AUDIT_A_M.md`.
+
 Trích từ bộ **Innovation Capabilities Outlook 2026** (`ico26_publicdata/`). Phạm vi 47 quốc gia châu Á (Đông Á + Tây và Trung Á theo phân loại của bộ dữ liệu), trong đó có 11 nước ASEAN (kể cả Timor-Leste, gia nhập 10/2025).
 
 Tạo lại toàn bộ bảng: `python3 du_lieu_jamovi_jasp/build_tables.py` (cần `pandas`, `pyarrow`, và đã `git lfs pull`).
